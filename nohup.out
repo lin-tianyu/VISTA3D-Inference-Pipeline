@@ -1,0 +1,92 @@
+input_dir: /root/autodl-tmp/VISTA-AbdomenAtlasDemo
+use second_stage: false
+2024-09-18 00:04:10,825 - INFO - --- input summary of monai.bundle.scripts.run ---
+2024-09-18 00:04:10,825 - INFO - > config_file: ['configs/inference.json', 'configs/batch_inference.json']
+2024-09-18 00:04:10,825 - INFO - > input_dir: '/root/autodl-tmp/VISTA-AbdomenAtlasDemo'
+2024-09-18 00:04:10,825 - INFO - > output_postfix: 'step1_117'
+2024-09-18 00:04:10,825 - INFO - ---
+
+
+/root/CCVL/vista3d_bundle/vista3d_venv/lib/python3.9/site-packages/monai/utils/deprecate_utils.py:321: FutureWarning: monai.bundle.workflows ConfigWorkflow.__init__:workflow_type: Current default value of argument `workflow_type=None` was changed in version 1.4 from `workflow_type=None` to `workflow_type=train`.
+  warn_deprecated(argname, msg, warning_category)
+2024-09-18 00:04:10,826 - INFO - Setting logging properties based on config: configs/logging.conf.
+/root/CCVL/vista3d_bundle/vista3d_venv/lib/python3.9/site-packages/monai/handlers/checkpoint_loader.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(self.load_path, map_location=self.map_location)
+2024-09-18 00:04:15,932 - root - INFO - Restored all variables from .//models/model.pt
+2024-09-18 00:04:15,933 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2024-09-18 00:04:34,362 INFO image_writer.py:197 - writing: eval/BDMAP_00000005/ct_step1_117.nii.gz
+2024-09-18 00:08:06,437 INFO image_writer.py:197 - writing: eval/BDMAP_00000006/ct_step1_117.nii.gz
+2024-09-18 00:13:34,410 INFO image_writer.py:197 - writing: eval/BDMAP_00000010/ct_step1_117.nii.gz
+2024-09-18 00:15:07,463 INFO image_writer.py:197 - writing: eval/BDMAP_00000012/ct_step1_117.nii.gz
+2024-09-18 00:16:25,723 INFO image_writer.py:197 - writing: eval/BDMAP_00000019/ct_step1_117.nii.gz
+2024-09-18 00:17:38,734 INFO image_writer.py:197 - writing: eval/BDMAP_00000022/ct_step1_117.nii.gz
+2024-09-18 00:19:08,344 INFO image_writer.py:197 - writing: eval/BDMAP_00000026/ct_step1_117.nii.gz
+2024-09-18 00:22:42,235 INFO image_writer.py:197 - writing: eval/BDMAP_00000031/ct_step1_117.nii.gz
+2024-09-18 00:25:41,063 - ignite.engine.engine.Vista3dEvaluator - INFO - Epoch[1] Complete. Time taken: 00:21:25.130
+2024-09-18 00:25:41,064 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run complete. Time taken: 00:21:25.130
+input_dir: /root/autodl-tmp/VISTA-AbdomenAtlasDemo
+use second_stage: false
+2024-09-18 01:39:55,024 - INFO - --- input summary of monai.bundle.scripts.run ---
+2024-09-18 01:39:55,024 - INFO - > config_file: ['configs/inference.json', 'configs/batch_inference.json']
+2024-09-18 01:39:55,024 - INFO - > input_dir: '/root/autodl-tmp/VISTA-AbdomenAtlasDemo'
+2024-09-18 01:39:55,024 - INFO - > output_postfix: 'step1_117'
+2024-09-18 01:39:55,024 - INFO - ---
+
+
+/root/CCVL/vista3d_bundle/vista3d_venv/lib/python3.9/site-packages/monai/utils/deprecate_utils.py:321: FutureWarning: monai.bundle.workflows ConfigWorkflow.__init__:workflow_type: Current default value of argument `workflow_type=None` was changed in version 1.4 from `workflow_type=None` to `workflow_type=train`.
+  warn_deprecated(argname, msg, warning_category)
+2024-09-18 01:39:55,025 - INFO - Setting logging properties based on config: configs/logging.conf.
+/root/CCVL/vista3d_bundle/vista3d_venv/lib/python3.9/site-packages/monai/handlers/checkpoint_loader.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(self.load_path, map_location=self.map_location)
+2024-09-18 01:39:59,924 - root - INFO - Restored all variables from .//models/model.pt
+2024-09-18 01:39:59,925 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2024-09-18 01:40:18,223 INFO image_writer.py:197 - writing: eval/BDMAP_00000005/ct_step1_117.nii.gz
+2024-09-18 01:43:33,189 INFO image_writer.py:197 - writing: eval/BDMAP_00000006/ct_step1_117.nii.gz
+2024-09-18 01:49:22,994 INFO image_writer.py:197 - writing: eval/BDMAP_00000010/ct_step1_117.nii.gz
+2024-09-18 01:50:58,421 INFO image_writer.py:197 - writing: eval/BDMAP_00000012/ct_step1_117.nii.gz
+2024-09-18 01:52:17,666 INFO image_writer.py:197 - writing: eval/BDMAP_00000019/ct_step1_117.nii.gz
+2024-09-18 01:53:30,876 INFO image_writer.py:197 - writing: eval/BDMAP_00000022/ct_step1_117.nii.gz
+2024-09-18 01:54:59,769 INFO image_writer.py:197 - writing: eval/BDMAP_00000026/ct_step1_117.nii.gz
+2024-09-18 01:58:32,664 INFO image_writer.py:197 - writing: eval/BDMAP_00000031/ct_step1_117.nii.gz
+2024-09-18 02:01:29,626 - ignite.engine.engine.Vista3dEvaluator - INFO - Epoch[1] Complete. Time taken: 00:21:29.701
+2024-09-18 02:01:29,627 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run complete. Time taken: 00:21:29.702
+input_dir: /root/autodl-tmp/VISTA-AbdomenAtlasDemo
+use second_stage: false
+2024-09-18 02:17:36,855 - INFO - --- input summary of monai.bundle.scripts.run ---
+2024-09-18 02:17:36,855 - INFO - > config_file: ['configs/inference.json', 'configs/batch_inference.json']
+2024-09-18 02:17:36,855 - INFO - > input_dir: '/root/autodl-tmp/VISTA-AbdomenAtlasDemo'
+2024-09-18 02:17:36,855 - INFO - > output_postfix: 'step1_117'
+2024-09-18 02:17:36,855 - INFO - ---
+
+
+/root/CCVL/vista3d_bundle/vista3d_venv/lib/python3.9/site-packages/monai/utils/deprecate_utils.py:321: FutureWarning: monai.bundle.workflows ConfigWorkflow.__init__:workflow_type: Current default value of argument `workflow_type=None` was changed in version 1.4 from `workflow_type=None` to `workflow_type=train`.
+  warn_deprecated(argname, msg, warning_category)
+2024-09-18 02:17:36,855 - INFO - Setting logging properties based on config: configs/logging.conf.
+/root/CCVL/vista3d_bundle/vista3d_venv/lib/python3.9/site-packages/monai/handlers/checkpoint_loader.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(self.load_path, map_location=self.map_location)
+2024-09-18 02:17:41,695 - root - INFO - Restored all variables from .//models/model.pt
+2024-09-18 02:17:41,696 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2024-09-18 02:17:59,411 INFO image_writer.py:197 - writing: eval/BDMAP_00000005/ct_step1_117.nii.gz
+2024-09-18 02:20:57,548 INFO image_writer.py:197 - writing: eval/BDMAP_00000006/ct_step1_117.nii.gz
+run-V2.sh: line 25: 355803 Killed                  CUDA_VISIBLE_DEVICES=0 python -m monai.bundle run --config_file="['configs/inference.json', 'configs/batch_inference.json']" --input_dir=$input_dir --output_postfix="step1_117"
+input_dir: /root/autodl-tmp/VISTA-AbdomenAtlasDemo
+use second_stage: false
+2024-09-18 02:22:25,566 - INFO - --- input summary of monai.bundle.scripts.run ---
+2024-09-18 02:22:25,566 - INFO - > config_file: ['configs/inference.json', 'configs/batch_inference.json']
+2024-09-18 02:22:25,566 - INFO - > input_dir: '/root/autodl-tmp/VISTA-AbdomenAtlasDemo'
+2024-09-18 02:22:25,566 - INFO - > output_postfix: 'step1_117'
+2024-09-18 02:22:25,566 - INFO - ---
+
+
+/root/CCVL/vista3d_bundle/vista3d_venv/lib/python3.9/site-packages/monai/utils/deprecate_utils.py:321: FutureWarning: monai.bundle.workflows ConfigWorkflow.__init__:workflow_type: Current default value of argument `workflow_type=None` was changed in version 1.4 from `workflow_type=None` to `workflow_type=train`.
+  warn_deprecated(argname, msg, warning_category)
+2024-09-18 02:22:25,566 - INFO - Setting logging properties based on config: configs/logging.conf.
+/root/CCVL/vista3d_bundle/vista3d_venv/lib/python3.9/site-packages/monai/handlers/checkpoint_loader.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(self.load_path, map_location=self.map_location)
+2024-09-18 02:22:30,173 - root - INFO - Restored all variables from .//models/model.pt
+2024-09-18 02:22:30,174 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2024-09-18 02:22:47,795 INFO image_writer.py:197 - writing: eval/BDMAP_00000005/ct_step1_117.nii.gz
+2024-09-18 02:26:18,431 INFO image_writer.py:197 - writing: eval/BDMAP_00000006/ct_step1_117.nii.gz
+2024-09-18 02:31:08,559 INFO image_writer.py:197 - writing: eval/BDMAP_00000010/ct_step1_117.nii.gz
+2024-09-18 02:32:37,280 INFO image_writer.py:197 - writing: eval/BDMAP_00000012/ct_step1_117.nii.gz
+2024-09-18 02:33:51,779 INFO image_writer.py:197 - writing: eval/BDMAP_00000019/ct_step1_117.nii.gz

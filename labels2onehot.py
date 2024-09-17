@@ -31,6 +31,22 @@ def seperate_class(data):
     def save_each_class(vol_name, pred_nii, class_list, label_list, label_prompt):
         pred_data = pred_nii.get_fdata().astype(np.uint8)
         for cls_id in label_prompt:
+            if cls_id == 28:    # lung_left
+                class_nii = nib.nifti1.Nifti1Image(((pred_data==28) | (pred_data==29)).astype(np.uint8), pred_nii.affine)
+                class_nii.set_qform(pred_nii.get_qform())
+                class_nii.set_sform(pred_nii.get_sform())
+                class_nii.to_filename(
+                    os.path.join("./eval", vol_name, "predictions", "lung_left.nii.gz")
+                    )
+            if cls_id == 30:    # lung_right
+                class_nii = nib.nifti1.Nifti1Image(((pred_data==30) | (pred_data==31) | (pred_data==32)).astype(np.uint8), pred_nii.affine)
+                class_nii.set_qform(pred_nii.get_qform())
+                class_nii.set_sform(pred_nii.get_sform())
+                class_nii.to_filename(
+                    os.path.join("./eval", vol_name, "predictions", "lung_right.nii.gz")
+                    )
+            if cls_id in [29, 31, 32]:
+                continue
             class_nii = nib.nifti1.Nifti1Image((pred_data==cls_id).astype(np.uint8), pred_nii.affine)
             class_nii.set_qform(pred_nii.get_qform())
             class_nii.set_sform(pred_nii.get_sform())
@@ -38,12 +54,10 @@ def seperate_class(data):
                 os.path.join("./eval", vol_name, "predictions", f"{class_list[label_list.index(cls_id)].replace(' ', '_')}.nii.gz")
                 )
     # Access the filename of the saved image    
-    # print(f"\033[31m{data.keys()}\033[0m")
-    # print(f"{[(k, v) for (k, v) in data.items()]}")
     filename = data['image_meta_dict']['filename_or_obj']    
     volume_name = filename.split("/")[-2]
 
-    label_prompt = list(set([i + 1 for i in range(132)]) - IGNORE_PROMPT)   # 117
+    label_prompt = list(set([i + 1 for i in range(132)]) - IGNORE_PROMPT - SEVEN_CLS)   # 117
 
     with open(LABEL_DICT, "r") as f:
         label_dict = json.load(f)
@@ -62,6 +76,10 @@ def seperate_class(data):
 
     """TODO
     1. align classes with Touchstone
+        - small bowel -> intestine
+        - right_lung -> 30/31/32
+        - left_lung -> 28/29
+        - W/O: celiac_trunk, rectum
     2. add logger feature
     3. add resume feature
     """
@@ -73,7 +91,7 @@ if __name__ == "__main__":
     folder = sys.argv[1]
     second_stage = bool(strtobool(sys.argv[2]))
 
-    label_prompt = list(set([i + 1 for i in range(132)]) - IGNORE_PROMPT)   # 117
+    label_prompt = list(set([i + 1 for i in range(132)]) - IGNORE_PROMPT - SEVEN_CLS)   # 117
 
     with open(LABEL_DICT, "r") as f:
         label_dict = json.load(f)

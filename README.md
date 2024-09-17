@@ -1,11 +1,15 @@
 # VISTA3D Inference Pipeline
 
 > Author: Tianyu Lin<br>
-> Date: 09/15/2024
 
 To run this inference pipeline, only **⚙️ Requirement** section and **💻 Usage** section are needed. The other sections are for detailed information.
 
-
+## 📰 News
+- Update 09/17/2024: 
+    1. solve environment issue;
+    2. only need to load model once;
+    3. solve label conflict issue (small bowel -> intestine, lung lobes -> left/right lung)
+    - TODO: add logger/resume from checkpoint feature
 
 ## ⚙️ Requirement
 Using Python `venv` to build a virtual environment. 
