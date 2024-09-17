@@ -62,7 +62,8 @@ def seperate_class(data):
 
     """TODO
     1. align classes with Touchstone
-    2. add logger / resume feature
+    2. add logger feature
+    3. add resume feature
     """
 
     return data

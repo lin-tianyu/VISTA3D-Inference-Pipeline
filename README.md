@@ -78,6 +78,7 @@ However, after [consulting with the author](https://github.com/Project-MONAI/VIS
     - 7 of them: "lung, pancreas, hepatic, colon, bone" tumor and "hepatic vessel" and "airway"
 
 As a result, **the total number of classes** is 
+
 $$
 \begin{equation}
 \begin{aligned}
@@ -86,6 +87,7 @@ $$
 \end{aligned}
 \end{equation}
 $$
+
 The inference process should be separated into two stages: 1. segment 117 classes; 2. segment 7 tumors/vessels classes.
 
 Fortunately, the classes needed for TouchStone benchmark are contained in the first 117 classes. So **the second stage of inference is implemented but not necessary.** The full label dict of this script is in `label_dict_127_touchstone.json`.
