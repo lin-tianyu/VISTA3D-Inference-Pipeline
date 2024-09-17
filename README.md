@@ -8,17 +8,21 @@ To run this inference pipeline, only **⚙️ Requirement** section and **💻 U
 
 
 ## ⚙️ Requirement
-
-The conda environment can be installed by:
-
+Using Python `venv` to build a virtual environment. 
+First, ensure you're using `Python>=3.9`. 
+<!-- If you don't have one, `sudo apt install python3.9` should install a Python 3.9 under `/usr/bin/python3.9`. -->
+With `/usr/bin/python3.9`, you can first create a venv environment by:
 ```bash
-conda create --name vista3d_bundle python=3.9 -y
-conda activate vista3d_bundle
+python3.9 -m venv vista3d_venv
+```
+Then activate the environment:
+```bash
+source vista3d_venv/bin/activate
+```
+The environment should be correctly installed by:
+```bash
 bash environment.sh
 ```
-
-> I tried my own server and a server from [AutoDL](https://www.autodl.com/home), but they both suffer from internet connection/root permission problems, making it hard to use SingularityCE.
-
 
 
 ## 💻 Usage
