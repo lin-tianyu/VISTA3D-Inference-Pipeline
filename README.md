@@ -99,8 +99,10 @@ The inference process should be separated into two stages: 1. segment 117 classe
 
 Fortunately, the classes needed for TouchStone benchmark are contained in the first 117 classes. So **the second stage of inference is implemented but not necessary.** The full label dict of this script is in `label_dict_127_touchstone.json`.
 
-> After thorough check, VISTA3D doesn't support `celiac_trunk` and `rectum` in Touchstone benchmark.
-
+> After thorough check, 
+> 1. VISTA3D doesn't support `celiac_trunk` and `rectum` in Touchstone benchmark.
+> 2. `lung_left` is merged by its upper and lower lobes, `lung_right` is merged by its upper, middle and lower lobes.
+> 3. all 5 of the lung lobes are retained.
 
 
 ### ❌ Collapse in kidney, lung, and bone
