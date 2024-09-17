@@ -8,8 +8,11 @@ To run this inference pipeline, only **⚙️ Requirement** section and **💻 U
 - Update 09/17/2024: 
     1. solve environment issue;
     2. only need to load model once;
-    3. solve label conflict issue (small bowel -> intestine, lung lobes -> left/right lung)
-    - TODO: add logger/resume from checkpoint feature
+    3. solve label name conflict issue (small bowel -> intestine, other classes are fine);
+    4. add two classes: `lung_left` and `lung_right` (merged from their lobes), so will have `117 + 2 = 119` classes in total;
+    5. modify "label description" section to explain label name conflicts with Touchstone benchmark.
+    - TODO: add logger/resume from checkpoint feature.
+    - NOTE: second stage for inference on 7 other classes is deprecated temporarily.
 
 ## ⚙️ Requirement
 Using Python `venv` to build a virtual environment. 
@@ -37,23 +40,23 @@ In short, VISTA3D can predict 124 (117+7) non-conflict labels. And the [author r
 
 
 
-- Thus, the simplest way to run the inference process is:
+- Thus, run the inference process like:
 
 ```bash
-bash run.sh "/path/to/ct_volumes" false     # predict 117 classes
+bash run.sh "/path/to/ct_volumes" false     # predict 117 classes + 2 classes (left/right lung) = 119 classes
 ```
 
-where `false` means don't predict the 7 classes. This will run inference process once on each volume with **117 labels.**
+where `false` means don't predict the 7 classes. This will run inference process once on each volume with **117+2=119 labels.**
 
 
 
-- If the 7 other classes are needed, run:
+<!-- - If the 7 other classes are needed, run:
 
 ```bash
 bash run.sh "/path/to/ct_volumes" true      # predict 117 + 7 = 124 classes
 ```
 
-This will run the inference process on each volume for two times. It could be slow.
+This will run the inference process on each volume for two times. It could be slow. -->
 
 
 
@@ -95,6 +98,8 @@ $$
 The inference process should be separated into two stages: 1. segment 117 classes; 2. segment 7 tumors/vessels classes.
 
 Fortunately, the classes needed for TouchStone benchmark are contained in the first 117 classes. So **the second stage of inference is implemented but not necessary.** The full label dict of this script is in `label_dict_127_touchstone.json`.
+
+> After thorough check, VISTA3D doesn't support `celiac_trunk` and `rectum` in Touchstone benchmark.
 
 
 

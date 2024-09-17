@@ -32,21 +32,19 @@ def seperate_class(data):
         pred_data = pred_nii.get_fdata().astype(np.uint8)
         for cls_id in label_prompt:
             if cls_id == 28:    # lung_left
-                class_nii = nib.nifti1.Nifti1Image(((pred_data==28) | (pred_data==29)).astype(np.uint8), pred_nii.affine)
+                class_nii = nib.nifti1.Nifti1Image(((pred_data==28) + (pred_data==29)).astype(np.uint8), pred_nii.affine)
                 class_nii.set_qform(pred_nii.get_qform())
                 class_nii.set_sform(pred_nii.get_sform())
                 class_nii.to_filename(
                     os.path.join("./eval", vol_name, "predictions", "lung_left.nii.gz")
                     )
             if cls_id == 30:    # lung_right
-                class_nii = nib.nifti1.Nifti1Image(((pred_data==30) | (pred_data==31) | (pred_data==32)).astype(np.uint8), pred_nii.affine)
+                class_nii = nib.nifti1.Nifti1Image(((pred_data==30) + (pred_data==31) + (pred_data==32)).astype(np.uint8), pred_nii.affine)
                 class_nii.set_qform(pred_nii.get_qform())
                 class_nii.set_sform(pred_nii.get_sform())
                 class_nii.to_filename(
                     os.path.join("./eval", vol_name, "predictions", "lung_right.nii.gz")
                     )
-            if cls_id in [29, 31, 32]:
-                continue
             class_nii = nib.nifti1.Nifti1Image((pred_data==cls_id).astype(np.uint8), pred_nii.affine)
             class_nii.set_qform(pred_nii.get_qform())
             class_nii.set_sform(pred_nii.get_sform())
@@ -72,16 +70,12 @@ def seperate_class(data):
     ) 
     save_each_class(volume_name, pred_nii, class_list, label_list, label_prompt)
 
-    os.remove(os.path.join("./eval", volume_name, "ct_step1_117.nii.gz"))
+    # os.remove(os.path.join("./eval", volume_name, "ct_step1_117.nii.gz"))
 
     """TODO
-    1. align classes with Touchstone
-        - small bowel -> intestine
-        - right_lung -> 30/31/32
-        - left_lung -> 28/29
         - W/O: celiac_trunk, rectum
-    2. add logger feature
-    3. add resume feature
+    1. add logger feature
+    2. add resume feature
     """
 
     return data
