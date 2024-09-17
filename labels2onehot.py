@@ -58,6 +58,13 @@ def seperate_class(data):
     ) 
     save_each_class(volume_name, pred_nii, class_list, label_list, label_prompt)
 
+    os.remove(os.path.join("./eval", volume_name, "ct_step1_117.nii.gz"))
+
+    """TODO
+    1. align classes with Touchstone
+    2. add logger / resume feature
+    """
+
     return data
 
 
