@@ -1,0 +1,9 @@
+models/model.pt
+eval/
+vista3d_venv/
+
+__pycache__/
+.ipynb_checkpoints/
+configs/.ipynb_checkpoints/
+scripts/.ipynb_checkpoints/
+scripts/__pycache__/

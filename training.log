@@ -1,0 +1,7 @@
+2024-09-17 10:10:20,005 - root - INFO - Restored all variables from .//models/model.pt
+2024-09-17 10:10:20,006 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2024-09-17 10:10:41,299 - ignite.engine.engine.Vista3dEvaluator - ERROR - Current run is terminating due to exception: applying transform <monai.transforms.compose.Compose object at 0x7f6f93938970>
+2024-09-17 10:10:41,308 - ignite.engine.engine.Vista3dEvaluator - ERROR - Engine run is terminating due to exception: applying transform <monai.transforms.compose.Compose object at 0x7f6f93938970>
+2024-09-17 10:11:54,189 - root - INFO - Restored all variables from .//models/model.pt
+2024-09-17 10:11:54,190 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2024-09-17 10:29:20,824 - ignite.engine.engine.Vista3dEvaluator - ERROR - Engine run is terminating due to exception: 
