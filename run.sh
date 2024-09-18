@@ -4,6 +4,9 @@ input_dir="/root/autodl-tmp/VISTA-AbdomenAtlasDemo"
 input_dir=$1        
 second_stage=false
 second_stage=$2     
+num_gpus=1
+num_gpus=$3
+single_gpu=1
 echo "input_dir: $input_dir"
 echo "use second_stage: $second_stage"
 
@@ -19,10 +22,19 @@ echo "use second_stage: $second_stage"
 # for folder in "${folder_list[@]}"; do
 #     echo "Processing folder: $folder"
 
+if [ $num_gpus -eq $single_gpu ]; then
 CUDA_VISIBLE_DEVICES=0 python -m monai.bundle run \
     --config_file="['configs/inference.json', 'configs/batch_inference.json']" \
     --input_dir=$input_dir \
     --output_postfix="step1_117"
+fi
+
+if [ $num_gpus -ge $single_gpu ]; then
+torchrun --nnodes=1 --nproc_per_node=$num_gpus -m monai.bundle run \
+    --config_file="['configs/inference.json', 'configs/batch_inference.json', 'configs/mgpu_inference.json']" \
+    --input_dir=$input_dir \
+    --output_postfix="step1_117"
+fi
 
 # if $second_stage; then
 #     echo "inference 2nd time for other classes"

@@ -41,3 +41,7 @@
 2024-09-18 04:03:36,597 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
 2024-09-18 04:24:01,707 - ignite.engine.engine.Vista3dEvaluator - INFO - Epoch[1] Complete. Time taken: 00:20:25.110
 2024-09-18 04:24:01,708 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run complete. Time taken: 00:20:25.111
+2024-09-18 21:59:13,426 - root - INFO - Restored all variables from .//models/model.pt
+2024-09-18 21:59:13,427 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2024-09-18 22:07:15,918 - ignite.engine.engine.Vista3dEvaluator - ERROR - Engine run is terminating due to exception: 
+2024-09-18 22:38:36,052 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
