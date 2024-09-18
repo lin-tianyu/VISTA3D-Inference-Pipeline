@@ -7,8 +7,7 @@ To run this inference pipeline, only **⚙️ Requirement** section and **💻 U
 ## 📰 News
 - Update 09/18/2024:
     1. support Multi-GPU inference (add a param to chose number of GPUs in `run.sh`)
-        - tested on two 3090 GPUs with ~2x times inference speed (log in `nohup.out` 
-        compares the inference speed)
+        - tested on two 3090 GPUs with ~2x times inference speed
     2.  add description on `nohup` for logging the command line output in `nohup.out`.
     - TODO: resume from checkpoint feature
 - Update 09/17/2024: 
