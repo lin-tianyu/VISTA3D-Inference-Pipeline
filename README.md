@@ -5,6 +5,12 @@
 To run this inference pipeline, only **⚙️ Requirement** section and **💻 Usage** section are needed. The other sections are for detailed information.
 
 ## 📰 News
+- Update 09/18/2024:
+    1. support Multi-GPU inference (add a param to chose number of GPUs in `run.sh`)
+        - tested on two 3090 GPUs with ~2x times inference speed (log in `nohup.out` 
+        compares the inference speed)
+    2.  add description on `nohup` for logging the command line output in `nohup.out`.
+    - TODO: resume from checkpoint feature
 - Update 09/17/2024: 
     1. solve environment issue;
     2. only need to load model once;
@@ -34,21 +40,25 @@ bash environment.sh
 
 ## 💻 Usage
 
-In short, VISTA3D can predict 124 (117+7) non-conflict labels. And the [author recommends](https://github.com/Project-MONAI/VISTA/issues/41) segment 7 of the classes (**not included in Touchstone**) in a separate inference stage to prevent noisy output. 
-
-> See details in the  **Label Description** section below.
-
-
+In short, VISTA3D can predict 124 (117+7) non-conflict labels. And the [author recommends](https://github.com/Project-MONAI/VISTA/issues/41) segment 7 of the classes (**not included in Touchstone**) in a separate inference stage to prevent noisy output. (See details in the  **Label Description** section below.)
 
 - Thus, run the inference process like:
 
 ```bash
-bash run.sh "/path/to/ct_volumes" false     # predict 117 classes + 2 classes (left/right lung) = 119 classes
+# predict 117  + 2  (left/right lung) = 119 classes
+bash run.sh "/path/to/ct_volumes" false num_gpus
 ```
+where: 
+1. `"/path/to/ct_volumes"` denotes the absolute path to ct volumes
+2. `false` means doesn't use second stage inference for the other 7 classes
+3. `num_gpus` denotes the number of GPU(s) used for inference. Set `num_gpus` to 1 to start single-GPU inference, and set `num_gpus` to 4 to start 4-GPUs inference (with DDP). 
 
-where `false` means don't predict the 7 classes. This will run inference process once on each volume with **117+2=119 labels.**
-
-
+What's more, using `nohup` is strongly recommanded:
+```bash
+# predict 117  + 2  (left/right lung) = 119 classes
+nohup bash run.sh "/path/to/ct_volumes" false num_gpus > nohup.out 2>&1 &
+```
+this will save all the command line output to `nohup.out`. This log file can also be seen in real time using the following command: `tail -f nohup.out`.
 
 <!-- - If the 7 other classes are needed, run:
 

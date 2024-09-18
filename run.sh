@@ -5,22 +5,12 @@ input_dir=$1
 second_stage=false
 second_stage=$2     
 num_gpus=1
-# num_gpus=$3
+num_gpus=$3
 single_gpu=1
 echo "input_dir: $input_dir"
 echo "use second_stage: $second_stage"
+echo "num_gpus: $num_gpus"
 
-# folder_list=()
-
-# for dir in $(find $input_dir -type d -name "BDMAP_*" | sort -V); do
-#     folder_name=$(basename "$dir")  
-#     folder_list+=("$folder_name")  
-# done
-
-# echo "Found folders: ${folder_list[@]}"
-
-# for folder in "${folder_list[@]}"; do
-#     echo "Processing folder: $folder"
 
 if [ $num_gpus -eq $single_gpu ]; then
 CUDA_VISIBLE_DEVICES=0 python -m monai.bundle run \
@@ -46,11 +36,3 @@ fi
 # fi 
 
     
-    # python labels2onehot.py $folder $second_stage   # seperate 117 (and 7) labels to binary maps
-
-    # rm "./eval/$folder/ct_step1_117.nii.gz"
-    # if $second_stage; then
-    #     rm rm "./eval/$folder/ct_step2_7.nii.gz"
-    # fi
-
-# done
