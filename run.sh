@@ -5,7 +5,7 @@ input_dir=$1
 second_stage=false
 second_stage=$2     
 num_gpus=1
-num_gpus=$3
+# num_gpus=$3
 single_gpu=1
 echo "input_dir: $input_dir"
 echo "use second_stage: $second_stage"
