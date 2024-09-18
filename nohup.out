@@ -2,31 +2,36 @@ nohup: ignoring input
 input_dir: /root/autodl-tmp/VISTA-AbdomenAtlasDemo
 use second_stage: false
 num_gpus: 2
-2024-09-19 00:09:37,142 - INFO - --- input summary of monai.bundle.scripts.run ---
-2024-09-19 00:09:37,142 - INFO - > config_file: ['configs/inference.json',
+2024-09-19 00:21:41,275 - INFO - --- input summary of monai.bundle.scripts.run ---
+2024-09-19 00:21:41,275 - INFO - > config_file: ['configs/inference.json',
  'configs/batch_inference.json',
  'configs/mgpu_inference.json']
-2024-09-19 00:09:37,142 - INFO - > input_dir: '/root/autodl-tmp/VISTA-AbdomenAtlasDemo'
-2024-09-19 00:09:37,142 - INFO - > output_postfix: 'step1_117'
-2024-09-19 00:09:37,142 - INFO - ---
+2024-09-19 00:21:41,275 - INFO - > input_dir: '/root/autodl-tmp/VISTA-AbdomenAtlasDemo'
+2024-09-19 00:21:41,275 - INFO - > output_postfix: 'step1_117'
+2024-09-19 00:21:41,275 - INFO - ---
 
 
 /root/CCVL/vista3d_bundle/vista3d_venv/lib/python3.9/site-packages/monai/utils/deprecate_utils.py:321: FutureWarning: monai.bundle.workflows ConfigWorkflow.__init__:workflow_type: Current default value of argument `workflow_type=None` was changed in version 1.4 from `workflow_type=None` to `workflow_type=train`.
   warn_deprecated(argname, msg, warning_category)
-2024-09-19 00:09:37,143 - INFO - Setting logging properties based on config: configs/logging.conf.
-2024-09-19 00:09:37,144 - INFO - --- input summary of monai.bundle.scripts.run ---
-2024-09-19 00:09:37,144 - INFO - > config_file: ['configs/inference.json',
+2024-09-19 00:21:41,276 - INFO - Setting logging properties based on config: configs/logging.conf.
+2024-09-19 00:21:41,276 - INFO - --- input summary of monai.bundle.scripts.run ---
+2024-09-19 00:21:41,277 - INFO - > config_file: ['configs/inference.json',
  'configs/batch_inference.json',
  'configs/mgpu_inference.json']
-2024-09-19 00:09:37,144 - INFO - > input_dir: '/root/autodl-tmp/VISTA-AbdomenAtlasDemo'
-2024-09-19 00:09:37,144 - INFO - > output_postfix: 'step1_117'
-2024-09-19 00:09:37,144 - INFO - ---
+2024-09-19 00:21:41,277 - INFO - > input_dir: '/root/autodl-tmp/VISTA-AbdomenAtlasDemo'
+2024-09-19 00:21:41,277 - INFO - > output_postfix: 'step1_117'
+2024-09-19 00:21:41,277 - INFO - ---
 
 
 /root/CCVL/vista3d_bundle/vista3d_venv/lib/python3.9/site-packages/monai/utils/deprecate_utils.py:321: FutureWarning: monai.bundle.workflows ConfigWorkflow.__init__:workflow_type: Current default value of argument `workflow_type=None` was changed in version 1.4 from `workflow_type=None` to `workflow_type=train`.
   warn_deprecated(argname, msg, warning_category)
-2024-09-19 00:09:37,144 - INFO - Setting logging properties based on config: configs/logging.conf.
-2024-09-19 00:09:41,501 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
-2024-09-19 00:09:59,976 INFO image_writer.py:197 - writing: eval/BDMAP_00000005/ct_step1_117.nii.gz
-2024-09-19 00:11:57,954 INFO image_writer.py:197 - writing: eval/BDMAP_00000006/ct_step1_117.nii.gz
-2024-09-19 00:13:03,946 INFO image_writer.py:197 - writing: eval/BDMAP_00000012/ct_step1_117.nii.gz
+2024-09-19 00:21:41,277 - INFO - Setting logging properties based on config: configs/logging.conf.
+2024-09-19 00:21:45,664 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2024-09-19 00:22:04,402 INFO image_writer.py:197 - writing: eval/BDMAP_00000005/ct_step1_117.nii.gz
+2024-09-19 00:24:02,401 INFO image_writer.py:197 - writing: eval/BDMAP_00000006/ct_step1_117.nii.gz
+2024-09-19 00:25:09,312 INFO image_writer.py:197 - writing: eval/BDMAP_00000012/ct_step1_117.nii.gz
+2024-09-19 00:26:28,071 INFO image_writer.py:197 - writing: eval/BDMAP_00000022/ct_step1_117.nii.gz
+2024-09-19 00:27:37,792 INFO image_writer.py:197 - writing: eval/BDMAP_00000010/ct_step1_117.nii.gz
+2024-09-19 00:29:27,098 INFO image_writer.py:197 - writing: eval/BDMAP_00000019/ct_step1_117.nii.gz
+2024-09-19 00:30:36,742 - ignite.engine.engine.Vista3dEvaluator - INFO - Epoch[1] Complete. Time taken: 00:08:51.078
+2024-09-19 00:30:36,742 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run complete. Time taken: 00:08:51.078

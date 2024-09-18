@@ -61,3 +61,8 @@
 2024-09-19 00:07:37,892 - ignite.engine.engine.Vista3dEvaluator - ERROR - Current run is terminating due to exception: applying transform <monai.transforms.compose.Compose object at 0x7fe5e4504310>
 2024-09-19 00:07:37,896 - ignite.engine.engine.Vista3dEvaluator - ERROR - Engine run is terminating due to exception: applying transform <monai.transforms.compose.Compose object at 0x7fe5e4504310>
 2024-09-19 00:09:41,501 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2024-09-19 00:19:15,159 - ignite.engine.engine.Vista3dEvaluator - ERROR - Current run is terminating due to exception: applying transform <monai.transforms.compose.Compose object at 0x7f2c5c3a43d0>
+2024-09-19 00:19:15,163 - ignite.engine.engine.Vista3dEvaluator - ERROR - Engine run is terminating due to exception: applying transform <monai.transforms.compose.Compose object at 0x7f2c5c3a43d0>
+2024-09-19 00:21:45,664 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2024-09-19 00:30:36,742 - ignite.engine.engine.Vista3dEvaluator - INFO - Epoch[1] Complete. Time taken: 00:08:51.078
+2024-09-19 00:30:36,742 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run complete. Time taken: 00:08:51.078
