@@ -3,6 +3,7 @@ import numpy as np
 import nibabel as nib
 import json
 from distutils.util import strtobool
+import glob
 # from tqdm import tqdm
 
 LABEL_DICT = "label_dict_127_touchstone.json"   # modified for touchstone label name
@@ -72,14 +73,32 @@ def seperate_class(data):
 
     os.remove(os.path.join("./eval", volume_name, "ct_step1_117.nii.gz"))
 
-    """TODO
-        - W/O: celiac_trunk, rectum
-    1. add logger feature
-    2. add resume feature
-    """
-
     return data
 
+def build_input_list(input_dir, input_suffix, output_dir):
+    def rprint(*string):
+        print("\033[31m", *string, "\033[0m")
+
+    input_list_path = sorted(glob.glob(os.path.join(input_dir, "*", input_suffix)))
+    input_dict = {x.split("/")[-2]:x for x in input_list_path}
+    rprint("[INFO]", "[Total Volumes Detected]", len(input_dict))
+
+    eval_list_path = glob.glob(os.path.join(output_dir, "*", "predictions"))
+    eval_list_volume = list(map(lambda x: x.split("/")[-2], eval_list_path))
+    eval_status_list = list(map(lambda x: len(glob.glob(os.path.join(x, "*.nii.gz"))) == 117 + 2, eval_list_path))
+    eval_completed_list = np.asarray(eval_list_volume)[eval_status_list]
+    rprint("[INFO]", "[Already Inferenced]", len(eval_completed_list))
+
+    for key in eval_completed_list: # get remaining volumes by deleting completed volumes
+        input_dict.pop(key)
+
+    input_list = list(input_dict.values())
+    rprint("[INFO]", "[Remaining Volumes]", len(input_list))
+
+    if len(input_list) == 0:
+        raise ValueError("\033[31mAll volumes have already been inferenced and stored in `./eval/`. Enjoy.\033[0m")
+
+    return input_list
 
 if __name__ == "__main__":
     folder = sys.argv[1]

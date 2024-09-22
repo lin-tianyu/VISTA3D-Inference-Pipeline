@@ -5,6 +5,11 @@
 To run this inference pipeline, only **⚙️ Requirement** section and **💻 Usage** section are needed. The other sections are for detailed information.
 
 ## 📰 News
+- Update 09/21/2024:
+    1. support resume from checkpoint feature: when the inference process is interrupted for any reason, simply run the inference again, the program will resume from the last imcomplete volume.
+        - implemented by detecting how many volumes already have 119 label files, and remove theses volumes from the input CT list.
+        - sample output: ![](assets/illustration.png)
+    2. fix an error: correct `if num_gpu >= 1 then DDP` to `if num_gpu > 1 then DDP` (in `run.sh`)
 - Update 09/18/2024:
     1. support Multi-GPU inference (add a param to chose number of GPUs in `run.sh`)
         - tested on two 3090 GPUs with ~2x times inference speed
@@ -117,10 +122,10 @@ Fortunately, the classes needed for TouchStone benchmark are contained in the fi
 ### ❌ Collapse in kidney, lung, and bone
 
 By default, if using label prompt 2 for kidney, the model will predict their subclasses (label 5/14) rather than label 2. The following figure shows predictions when using label prompt `[2, 20, 21]`:
-![](2-20-21-subclass.png)
+![](assets/2-20-21-subclass.png)
 
 However, if we force the model to predict class 2 with label prompt 2 (without subclasses), the model will collapse. The following figures shows predictions using label prompt `[2, 20, 21]`, and forcing model to outbut label `[2, 20, 21]` rather than their subclasses:
-![](2-20-21-collapse.png)
+![](assets/2-20-21-collapse.png)
 
 As a result, it seems that we don't have to predict these 3 classes after the two-stage predictions shown above.
 

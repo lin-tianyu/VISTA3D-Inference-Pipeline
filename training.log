@@ -66,3 +66,22 @@
 2024-09-19 00:21:45,664 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
 2024-09-19 00:30:36,742 - ignite.engine.engine.Vista3dEvaluator - INFO - Epoch[1] Complete. Time taken: 00:08:51.078
 2024-09-19 00:30:36,742 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run complete. Time taken: 00:08:51.078
+2024-09-22 06:26:49,119 - root - INFO - Restored all variables from .//models/model.pt
+2024-09-22 06:26:49,121 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2024-09-22 06:42:28,229 - ignite.engine.engine.Vista3dEvaluator - INFO - Epoch[1] Complete. Time taken: 00:15:39.108
+2024-09-22 06:42:28,229 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run complete. Time taken: 00:15:39.108
+2024-09-22 06:42:38,131 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2024-09-22 06:57:30,022 - ignite.engine.engine.Vista3dEvaluator - INFO - Epoch[1] Complete. Time taken: 00:14:51.891
+2024-09-22 06:57:30,023 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run complete. Time taken: 00:14:51.891
+2024-09-22 10:37:50,651 - root - INFO - Restored all variables from .//models/model.pt
+2024-09-22 10:37:50,652 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2024-09-22 10:42:12,383 - ignite.engine.engine.Vista3dEvaluator - INFO - Epoch[1] Complete. Time taken: 00:04:21.731
+2024-09-22 10:42:12,383 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run complete. Time taken: 00:04:21.731
+2024-09-22 11:00:37,420 - root - INFO - Restored all variables from .//models/model.pt
+2024-09-22 11:00:37,421 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2024-09-22 11:09:57,067 - ignite.engine.engine.Vista3dEvaluator - INFO - Epoch[1] Complete. Time taken: 00:09:19.646
+2024-09-22 11:09:57,068 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run complete. Time taken: 00:09:19.647
+2024-09-22 11:12:35,609 - root - INFO - Restored all variables from .//models/model.pt
+2024-09-22 11:12:35,610 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2024-09-22 11:15:14,997 - ignite.engine.engine.Vista3dEvaluator - INFO - Epoch[1] Complete. Time taken: 00:02:39.387
+2024-09-22 11:15:14,998 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run complete. Time taken: 00:02:39.387

@@ -19,7 +19,7 @@ CUDA_VISIBLE_DEVICES=0 python -m monai.bundle run \
     --output_postfix="step1_117"
 fi
 
-if [ $num_gpus -ge $single_gpu ]; then
+if [ $num_gpus -gt $single_gpu ]; then
 torchrun --nnodes=1 --nproc_per_node=$num_gpus -m monai.bundle run \
     --config_file="['configs/inference.json', 'configs/batch_inference.json', 'configs/mgpu_inference.json']" \
     --input_dir=$input_dir \
