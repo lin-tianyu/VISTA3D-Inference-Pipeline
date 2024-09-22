@@ -6,12 +6,12 @@ To run this inference pipeline, only **⚙️ Requirement** section and **💻 U
 
 ## 📰 News
 - Update 09/21/2024:
-    1. support resume from checkpoint feature: when the inference process is interrupted for any reason, simply run the inference again, the program will resume from the last imcomplete volume.
+    1. **support resume from checkpoint feature**: when the inference process is interrupted for any reason, simply run the inference again, the program will resume from the last imcomplete volume.
         - implemented by detecting how many volumes already have 119 label files, and remove theses volumes from the input CT list.
         - sample output: ![](assets/illustration.png)
     2. fix an error: correct `if num_gpu >= 1 then DDP` to `if num_gpu > 1 then DDP` (in `run.sh`)
 - Update 09/18/2024:
-    1. support Multi-GPU inference (add a param to chose number of GPUs in `run.sh`)
+    1. **support Multi-GPU inference** (add a param to chose number of GPUs in `run.sh`)
         - tested on two 3090 GPUs with ~2x times inference speed
     2.  add description on `nohup` for logging the command line output in `nohup.out`.
     - TODO: resume from checkpoint feature
