@@ -1,0 +1,107 @@
+nohup: ignoring input
+input_dir: /mnt/T9/AbdomenAtlasPro/
+use second_stage: false
+num_gpus: 5
+W0922 16:36:55.960623 139722394346688 torch/distributed/run.py:779] 
+W0922 16:36:55.960623 139722394346688 torch/distributed/run.py:779] *****************************************
+W0922 16:36:55.960623 139722394346688 torch/distributed/run.py:779] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0922 16:36:55.960623 139722394346688 torch/distributed/run.py:779] *****************************************
+2024-09-22 16:37:00,183 - INFO - --- input summary of monai.bundle.scripts.run ---
+2024-09-22 16:37:00,184 - INFO - > config_file: ['configs/inference.json',
+ 'configs/batch_inference.json',
+ 'configs/mgpu_inference.json']
+2024-09-22 16:37:00,184 - INFO - > input_dir: '/mnt/T9/AbdomenAtlasPro/'
+2024-09-22 16:37:00,184 - INFO - > output_postfix: 'step1_117'
+2024-09-22 16:37:00,184 - INFO - ---
+
+
+/data2/wenxuan/code/benchmark/anaconda3/envs/vista3d_bundle/lib/python3.9/site-packages/monai/utils/deprecate_utils.py:321: FutureWarning: monai.bundle.workflows ConfigWorkflow.__init__:workflow_type: Current default value of argument `workflow_type=None` was changed in version 1.4 from `workflow_type=None` to `workflow_type=train`.
+  warn_deprecated(argname, msg, warning_category)
+2024-09-22 16:37:00,184 - INFO - Setting logging properties based on config: configs/logging.conf.
+2024-09-22 16:37:02,332 - INFO - --- input summary of monai.bundle.scripts.run ---
+2024-09-22 16:37:02,333 - INFO - > config_file: ['configs/inference.json',
+ 'configs/batch_inference.json',
+ 'configs/mgpu_inference.json']
+2024-09-22 16:37:02,333 - INFO - > input_dir: '/mnt/T9/AbdomenAtlasPro/'
+2024-09-22 16:37:02,333 - INFO - > output_postfix: 'step1_117'
+2024-09-22 16:37:02,333 - INFO - ---
+
+
+/data2/wenxuan/code/benchmark/anaconda3/envs/vista3d_bundle/lib/python3.9/site-packages/monai/utils/deprecate_utils.py:321: FutureWarning: monai.bundle.workflows ConfigWorkflow.__init__:workflow_type: Current default value of argument `workflow_type=None` was changed in version 1.4 from `workflow_type=None` to `workflow_type=train`.
+  warn_deprecated(argname, msg, warning_category)
+2024-09-22 16:37:02,334 - INFO - Setting logging properties based on config: configs/logging.conf.
+2024-09-22 16:37:02,545 - INFO - --- input summary of monai.bundle.scripts.run ---
+2024-09-22 16:37:02,546 - INFO - > config_file: ['configs/inference.json',
+ 'configs/batch_inference.json',
+ 'configs/mgpu_inference.json']
+2024-09-22 16:37:02,546 - INFO - > input_dir: '/mnt/T9/AbdomenAtlasPro/'
+2024-09-22 16:37:02,546 - INFO - > output_postfix: 'step1_117'
+2024-09-22 16:37:02,546 - INFO - ---
+
+
+/data2/wenxuan/code/benchmark/anaconda3/envs/vista3d_bundle/lib/python3.9/site-packages/monai/utils/deprecate_utils.py:321: FutureWarning: monai.bundle.workflows ConfigWorkflow.__init__:workflow_type: Current default value of argument `workflow_type=None` was changed in version 1.4 from `workflow_type=None` to `workflow_type=train`.
+  warn_deprecated(argname, msg, warning_category)
+2024-09-22 16:37:02,546 - INFO - Setting logging properties based on config: configs/logging.conf.
+2024-09-22 16:37:02,788 - INFO - --- input summary of monai.bundle.scripts.run ---
+2024-09-22 16:37:02,788 - INFO - > config_file: ['configs/inference.json',
+ 'configs/batch_inference.json',
+ 'configs/mgpu_inference.json']
+2024-09-22 16:37:02,788 - INFO - > input_dir: '/mnt/T9/AbdomenAtlasPro/'
+2024-09-22 16:37:02,788 - INFO - > output_postfix: 'step1_117'
+2024-09-22 16:37:02,788 - INFO - ---
+
+
+/data2/wenxuan/code/benchmark/anaconda3/envs/vista3d_bundle/lib/python3.9/site-packages/monai/utils/deprecate_utils.py:321: FutureWarning: monai.bundle.workflows ConfigWorkflow.__init__:workflow_type: Current default value of argument `workflow_type=None` was changed in version 1.4 from `workflow_type=None` to `workflow_type=train`.
+  warn_deprecated(argname, msg, warning_category)
+2024-09-22 16:37:02,789 - INFO - Setting logging properties based on config: configs/logging.conf.
+2024-09-22 16:37:14,339 - INFO - --- input summary of monai.bundle.scripts.run ---
+2024-09-22 16:37:14,342 - INFO - > config_file: ['configs/inference.json',
+ 'configs/batch_inference.json',
+ 'configs/mgpu_inference.json']
+2024-09-22 16:37:14,342 - INFO - > input_dir: '/mnt/T9/AbdomenAtlasPro/'
+2024-09-22 16:37:14,342 - INFO - > output_postfix: 'step1_117'
+2024-09-22 16:37:14,342 - INFO - ---
+
+
+/data2/wenxuan/code/benchmark/anaconda3/envs/vista3d_bundle/lib/python3.9/site-packages/monai/utils/deprecate_utils.py:321: FutureWarning: monai.bundle.workflows ConfigWorkflow.__init__:workflow_type: Current default value of argument `workflow_type=None` was changed in version 1.4 from `workflow_type=None` to `workflow_type=train`.
+  warn_deprecated(argname, msg, warning_category)
+2024-09-22 16:37:14,345 - INFO - Setting logging properties based on config: configs/logging.conf.
+[31m [INFO] [Total Volumes Detected] 32089 [0m
+[31m [INFO] [Total Volumes Detected] 32089 [0m
+[31m [INFO] [Total Volumes Detected] 32089 [0m
+[31m [INFO] [Total Volumes Detected] 32089 [0m
+[31m [INFO] [Total Volumes Detected] 32089 [0m
+[31m[31m [INFO]  [Already Inferenced][INFO]  0[Already Inferenced]  [0m0
+ [0m
+[31m[31m  [INFO][INFO]  [Remaining Volumes][Remaining Volumes]  3208932089  [0m[0m
+
+[31m[31m [31m[INFO]  [INFO][Already Inferenced]  [INFO] [Already Inferenced]  0[Already Inferenced] 0 [0m [0m0
+
+ [0m
+[31m [INFO] [Remaining Volumes] 32089 [0m
+[31m [INFO] [Remaining Volumes] 32089 [0m
+[31m [INFO] [Remaining Volumes] 32089 [0m
+2024-09-22 16:45:06,775 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2024-09-22 16:47:14,338 INFO image_writer.py:197 - writing: eval/BDMAP_00000005/ct_step1_117.nii.gz
+2024-09-22 16:47:22,972 INFO image_writer.py:197 - writing: eval/BDMAP_00000002/ct_step1_117.nii.gz
+2024-09-22 16:47:26,958 INFO image_writer.py:197 - writing: eval/BDMAP_00000004/ct_step1_117.nii.gz
+2024-09-22 16:47:37,511 INFO image_writer.py:197 - writing: eval/BDMAP_00000003/ct_step1_117.nii.gz
+2024-09-22 16:47:38,725 INFO image_writer.py:197 - writing: eval/BDMAP_00000001/ct_step1_117.nii.gz
+2024-09-22 16:50:57,076 INFO image_writer.py:197 - writing: eval/BDMAP_00000008/ct_step1_117.nii.gz
+2024-09-22 16:51:41,926 INFO image_writer.py:197 - writing: eval/BDMAP_00000006/ct_step1_117.nii.gz
+2024-09-22 16:51:57,509 INFO image_writer.py:197 - writing: eval/BDMAP_00000013/ct_step1_117.nii.gz
+2024-09-22 16:52:04,118 INFO image_writer.py:197 - writing: eval/BDMAP_00000009/ct_step1_117.nii.gz
+2024-09-22 16:52:22,039 INFO image_writer.py:197 - writing: eval/BDMAP_00000018/ct_step1_117.nii.gz
+2024-09-22 16:52:54,890 INFO image_writer.py:197 - writing: eval/BDMAP_00000023/ct_step1_117.nii.gz
+2024-09-22 16:53:18,583 INFO image_writer.py:197 - writing: eval/BDMAP_00000007/ct_step1_117.nii.gz
+2024-09-22 16:54:17,258 INFO image_writer.py:197 - writing: eval/BDMAP_00000012/ct_step1_117.nii.gz
+2024-09-22 16:54:17,867 INFO image_writer.py:197 - writing: eval/BDMAP_00000028/ct_step1_117.nii.gz
+2024-09-22 16:56:05,865 INFO image_writer.py:197 - writing: eval/BDMAP_00000014/ct_step1_117.nii.gz
+2024-09-22 16:56:35,374 INFO image_writer.py:197 - writing: eval/BDMAP_00000019/ct_step1_117.nii.gz
+2024-09-22 16:57:36,307 INFO image_writer.py:197 - writing: eval/BDMAP_00000033/ct_step1_117.nii.gz
+2024-09-22 16:57:56,342 INFO image_writer.py:197 - writing: eval/BDMAP_00000011/ct_step1_117.nii.gz
+2024-09-22 17:02:41,086 INFO image_writer.py:197 - writing: eval/BDMAP_00000017/ct_step1_117.nii.gz
+2024-09-22 17:03:03,817 INFO image_writer.py:197 - writing: eval/BDMAP_00000022/ct_step1_117.nii.gz
+2024-09-22 17:03:12,770 INFO image_writer.py:197 - writing: eval/BDMAP_00000038/ct_step1_117.nii.gz
+2024-09-22 17:03:49,599 INFO image_writer.py:197 - writing: eval/BDMAP_00000043/ct_step1_117.nii.gz
+2024-09-22 17:03:57,322 INFO image_writer.py:197 - writing: eval/BDMAP_00000024/ct_step1_117.nii.gz
