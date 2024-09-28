@@ -5,6 +5,12 @@
 To run this inference pipeline, only **⚙️ Requirement** section and **💻 Usage** section are needed. The other sections are for detailed information.
 
 ## 📰 News
+- Update 09/28/2024:
+    1. **support logging volume name that cause OOM problem**:
+        - When encounter OOM error, the name of the volume causing this error will be highlighted (red) in the output. 
+        - Also, this naughty volume will be log into `oom_errors.log`. For example:![](assets/oom_log.png)
+        - To continue: delete the volume that cause OOM, and run the inference again.
+        > Have been tested on OOM with: model forward stage & postprocessing stage. (2 GPUs)
 - Update 09/21/2024:
     1. **support resume from checkpoint feature**: when the inference process is interrupted for any reason, simply run the inference again, the program will resume from the last imcomplete volume.
         - implemented by detecting how many volumes already have 119 label files, and remove theses volumes from the input CT list.

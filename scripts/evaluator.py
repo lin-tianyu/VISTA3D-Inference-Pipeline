@@ -24,6 +24,8 @@ from monai.utils import ForwardMode, RankFilter, min_version, optional_import
 from monai.utils.enums import CommonKeys as Keys
 from torch.utils.data import DataLoader
 
+from monai.handlers import StatsHandler
+
 rearrange, _ = optional_import("einops", name="rearrange")
 
 if TYPE_CHECKING:
@@ -36,6 +38,42 @@ else:
 
 __all__ = ["Vista3dEvaluator"]
 
+# scripts/handlers.py
+
+from ignite.engine import Events
+
+class OOMExceptionHandler:
+    def __init__(self, log_file='oom_errors.log'):
+        self.log_file = log_file
+
+    def attach(self, engine):
+        @engine.on(Events.EXCEPTION_RAISED)
+        def handle_exception(engine, e):
+            def is_oom_error(exc):
+                while exc:
+                    if 'out of memory' in str(exc):
+                        return True
+                    exc = exc.__cause__
+                return False
+            
+            if is_oom_error(e):
+                data = engine.state.batch
+                print(data)
+                if isinstance(data, list):
+                    data = data[0]
+                filename = data.get('image_meta_dict', {}).get('filename_or_obj', 'Unknown')
+                message = f"OOM error occurred with file: {filename}"
+                print("\033[31m", message, "\033[0m")
+                # Log the error to a file
+                with open(self.log_file, 'a') as f:
+                    f.write(message + '\n')
+                # Clear CUDA cache
+                torch.cuda.empty_cache()
+                # Skip to the next iteration
+                engine.state.iteration += 1
+            else:
+                # Re-raise other exceptions
+                raise e
 
 class Vista3dEvaluator(SupervisedEvaluator):
     """

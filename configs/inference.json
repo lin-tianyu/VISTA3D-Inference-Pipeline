@@ -175,6 +175,10 @@
     },
     "handlers": [
         {
+            "_target_": "scripts.evaluator.OOMExceptionHandler",
+            "log_file": "$@bundle_root + 'oom_errors.log'"
+        },
+        {
             "_target_": "StatsHandler",
             "iteration_log": false
         }
