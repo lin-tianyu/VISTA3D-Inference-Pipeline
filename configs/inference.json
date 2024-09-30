@@ -38,9 +38,9 @@
     },
     "input_channels": 1,
     "resample_spacing": [
-        1.5,
-        1.5,
-        1.5
+        3.5,
+        3.5,
+        3.5
     ],
     "sw_batch_size": 1,
     "patch_size": [
@@ -176,7 +176,7 @@
     "handlers": [
         {
             "_target_": "scripts.evaluator.OOMExceptionHandler",
-            "log_file": "$@bundle_root + 'oom_errors.log'"
+            "log_file": "$@bundle_root + 'errors.log'"
         },
         {
             "_target_": "StatsHandler",

@@ -84,21 +84,26 @@ def build_input_list(input_dir, input_suffix, output_dir):
     rprint("[INFO]", "[Total Volumes Detected]", len(input_dict))
 
     eval_list_path = glob.glob(os.path.join(output_dir, "*", "predictions"))
-    eval_list_volume = list(map(lambda x: x.split("/")[-2], eval_list_path))
+    eval_list_volume = list(map(lambda x: x.split("/")[-2], eval_list_path))    # BDMAP_XXXXXXXX
     eval_status_list = list(map(lambda x: len(glob.glob(os.path.join(x, "*.nii.gz"))) == 117 + 2, eval_list_path))
     eval_completed_list = np.asarray(eval_list_volume)[eval_status_list]
-    rprint("[INFO]", "[Already Inferenced]", len(eval_completed_list))
 
-    for key in eval_completed_list: # get remaining volumes by deleting completed volumes
+    already_completed_list = [(volume_name if volume_name in eval_completed_list else None) \
+                              for volume_name in input_dict.keys()]
+    already_completed_list = list(filter(lambda x: x is not None, already_completed_list))
+    for key in already_completed_list: # get remaining volumes by deleting completed volumes
         input_dict.pop(key)
+
+    rprint("[INFO]", "[Already Inferenced]", len(already_completed_list))
 
     input_list = list(input_dict.values())
     rprint("[INFO]", "[Remaining Volumes]", len(input_list))
 
     if len(input_list) == 0:
         raise ValueError("\033[31mAll volumes have already been inferenced and stored in `./eval/`. Enjoy.\033[0m")
-
+    sys.exit(0)
     return input_list
+
 
 if __name__ == "__main__":
     folder = sys.argv[1]
