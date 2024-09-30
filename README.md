@@ -6,7 +6,7 @@ To run this inference pipeline, only **⚙️ Requirement** section and **💻 U
 
 ## 📰 News
 - Update 09/30/2024:
-    1. The name of the volume causing any (hopefully) errors would be capture and log `./errors.log`.
+    1. The volume name causing any (hopefully) errors would be capture and log in `./errors.log`.
     2. Checking already inferenced volumes by searching input volume in the `eval` folder.
 - Update 09/28/2024:
     1. **support logging volume name that cause OOM problem**:
