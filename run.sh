@@ -1,6 +1,6 @@
 #!/bin/bash
 
-input_dir="/root/autodl-tmp/VISTA-AbdomenAtlasDemo"
+input_dir="/mnt/realccvl15/zzhou82/data/AbdomenAtlasPro"
 input_dir=$1        
 second_stage=false
 second_stage=$2     
@@ -13,6 +13,7 @@ echo "num_gpus: $num_gpus"
 
 
 if [ $num_gpus -eq $single_gpu ]; then
+echo "single GPU inference..."
 CUDA_VISIBLE_DEVICES=0 python -m monai.bundle run \
     --config_file="['configs/inference.json', 'configs/batch_inference.json']" \
     --input_dir=$input_dir \
@@ -20,6 +21,7 @@ CUDA_VISIBLE_DEVICES=0 python -m monai.bundle run \
 fi
 
 if [ $num_gpus -gt $single_gpu ]; then
+echo "multi GPU inference..."
 torchrun --nnodes=1 --nproc_per_node=$num_gpus -m monai.bundle run \
     --config_file="['configs/inference.json', 'configs/batch_inference.json', 'configs/mgpu_inference.json']" \
     --input_dir=$input_dir \

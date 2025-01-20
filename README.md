@@ -5,6 +5,13 @@
 To run this inference pipeline, only **⚙️ Requirement** section and **💻 Usage** section are needed. The other sections are for detailed information.
 
 ## 📰 News
+- Update 19/01/2024:
+    1. Please focus on `label2onehot.py`, `scripts/inference.json` and `scripts/batch_inference.json` if you want to modify some settings. See the Usage section for more details.
+    2. The label mapping has been changed to `AbdomenAtlas3.1` version.
+    3. I have encountered a BUG regrading `ImportError` of pytorch. Likely this is beacuse of CUDA. The CCVL19 server **with CUDA-11.7** doesn't have this BUG, while the CCVL18 server with CUDA-12+ has.
+<details>
+<summary>Click to see previous updates.</summary>
+
 - Update 09/30/2024:
     1. The volume name causing any (hopefully) errors would be capture and log in `./errors.log`.
     2. Checking already inferenced volumes by searching input volume in the `eval` folder.
@@ -32,6 +39,8 @@ To run this inference pipeline, only **⚙️ Requirement** section and **💻 U
     5. modify "label description" section to explain label name conflicts with Touchstone benchmark.
     - TODO: add logger/resume from checkpoint feature.
     - NOTE: second stage for inference on 7 other classes is deprecated temporarily.
+</details>
+
 
 ## ⚙️ Requirement
 Using Python `venv` to build a virtual environment. 
@@ -49,29 +58,71 @@ The environment should be correctly installed by:
 ```bash
 bash environment.sh
 ```
+<details>
+<summary>Conda Environment Installation Instructions</summary>
 
+```bash
+conda env create -n vista3d_venv python=3.9 -y
+conda activate vista3d_venv
+bash environment.sh
+```
+
+</details>
 
 ## 💻 Usage
 
-In short, VISTA3D can predict 124 (117+7) non-conflict labels. And the [author recommends](https://github.com/Project-MONAI/VISTA/issues/41) segment 7 of the classes (**not included in Touchstone**) in a separate inference stage to prevent noisy output. (See details in the  **Label Description** section below.)
+<!-- In short, VISTA3D can predict 124 (117+7) non-conflict labels. And the [author recommends](https://github.com/Project-MONAI/VISTA/issues/41) segment 7 of the classes (**not included in Touchstone**) in a separate inference stage to prevent noisy output. (See details in the  **Label Description** section below.) -->
+Sadly, due to MONAI Bundle's high-level wrapper design, some modifications need to be made for customized usage of this inference scripts.
+There are 3 designed scene:
+1. Only want to seperate VISTA3D combined results into one-hot label format:
+    ```bash
+    python label2onehot.py \
+        --pred_root /path/to/VISTA3D-predictions \
+        --output_root /path/to/Tartget-OneHot-savings
+    ```
 
-- Thus, run the inference process like:
+2. VISTA3D Inference 
+    - go to `label2onehot.py`, modify the `output_root` variable under `seperate_class` function to the `/path/to/Tartget-OneHot-savings`
+    1. Get CT from **file path**:
+        - make sure the `scripts/inference.json` contains
+        ```json
+        "output_dir": "$@bundle_root + '/path/to/Tartget-OneHot-savings'",
+        ```
+        - make sure the `scripts/batch_inference.json` contains 
+        ```json
+        "input_suffix": "*.nii.gz",
+        "input_list": "$labels2onehot.build_input_list(@input_dir, @input_suffix, @output_dir)",    
+        ```
+    2. Get CT from **csv file**:
+        - make sure the `scripts/inference.json` contains
+        ```json
+        "output_dir": "$@bundle_root + '/path/to/Tartget-OneHot-savings'",
+        ```
+        - make sure the `scripts/batch_inference.json` contains 
+        ```json
+        "input_suffix": "/path/to/xxxxxx.csv",
+        "input_list": "$labels2onehot.build_input_list_from_csv(@input_dir, @input_suffix, @output_dir)",  
+        ```
+    - Then, run the inference process by `bash run.sh "/path/to/ct_volumes" false num_gpus` (see bellow)
 
+
+
+The **Inference Command** is shown as follows
 ```bash
 # predict 117  + 2  (left/right lung) = 119 classes
 bash run.sh "/path/to/ct_volumes" false num_gpus
 ```
 where: 
 1. `"/path/to/ct_volumes"` denotes the absolute path to ct volumes
-2. `false` means doesn't use second stage inference for the other 7 classes
+2. `false` means doesn't use second stage inference for the other 7 classes (DON'T change it)
 3. `num_gpus` denotes the number of GPU(s) used for inference. Set `num_gpus` to 1 to start single-GPU inference, and set `num_gpus` to 4 to start 4-GPUs inference (with DDP). 
 
-What's more, using `nohup` is strongly recommanded:
+<!-- What's more, using `nohup` is strongly recommanded:
 ```bash
 # predict 117  + 2  (left/right lung) = 119 classes
 nohup bash run.sh "/path/to/ct_volumes" false num_gpus > nohup.out 2>&1 &
 ```
-this will save all the command line output to `nohup.out`. This log file can also be seen in real time using the following command: `tail -f nohup.out`.
+this will save all the command line output to `nohup.out`. This log file can also be seen in real time using the following command: `tail -f nohup.out`. -->
 
 <!-- - If the 7 other classes are needed, run:
 
@@ -83,12 +134,14 @@ This will run the inference process on each volume for two times. It could be sl
 
 
 
-- **The output predictions will be under `./eval`**.
 
 
 
 
 # Appendix
+<details>
+<summary>Click to expand Appendix</summary>
+
 
 ### ❗️ Notes
 
@@ -138,3 +191,5 @@ However, if we force the model to predict class 2 with label prompt 2 (without s
 
 As a result, it seems that we don't have to predict these 3 classes after the two-stage predictions shown above.
 
+
+</details>

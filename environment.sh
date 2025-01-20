@@ -14,3 +14,5 @@ pip install wheel
 pip install fire
 pip install nibabel
 pip install pytorch-ignite
+pip install tqdm
+pip install pandas
