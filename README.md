@@ -5,6 +5,9 @@
 To run this inference pipeline, only **⚙️ Requirement** section and **💻 Usage** section are needed. The other sections are for detailed information.
 
 ## 📰 News
+- Update 21/01/2024:
+    1. solve `noisy inference` bug.
+    2. Update `run.sh` script to simplfy usage. No need to mess with json files anymore.
 - Update 19/01/2024:
     1. Please focus on `label2onehot.py`, `scripts/inference.json` and `scripts/batch_inference.json` if you want to modify some settings. See the Usage section for more details.
     2. The label mapping has been changed to `AbdomenAtlas3.1` version.
@@ -81,41 +84,34 @@ There are 3 designed scene:
         --output_root /path/to/Tartget-OneHot-savings
     ```
 
-2. VISTA3D Inference 
-    - go to `label2onehot.py`, modify the `output_root` variable under `seperate_class` function to the `/path/to/Tartget-OneHot-savings`
-    1. Get CT from **file path**:
-        - make sure the `scripts/inference.json` contains
-        ```json
-        "output_dir": "$@bundle_root + '/path/to/Tartget-OneHot-savings'",
+2. VISTA3D Inference + split to one-hot labels:
+    1. get CT paths from **file directory** (by default)
+        - modify some  parameters in `run.sh`:
+        ```bash
+        # >>>>>>>>>>>>>> Tunable parameters >>>>>>>>>>>>>>
+        input_suffix="ct.nii.gz"
+        input_list="\$labels2onehot.build_input_list(@input_dir,""@input_suffix,""@output_dir)"
+        export VISTA3D_OUTPUT_DIR="./eval"
+        # <<<<<<<<<<<<<< Tunable parameters <<<<<<<<<<<<<<
         ```
-        - make sure the `scripts/batch_inference.json` contains 
-        ```json
-        "input_suffix": "*.nii.gz",
-        "input_list": "$labels2onehot.build_input_list(@input_dir, @input_suffix, @output_dir)",    
+    2. get CT paths form **csv**
+        - modify some  parameters in `run.sh`:
+        ```bash
+        # >>>>>>>>>>>>>> Tunable parameters >>>>>>>>>>>>>>
+        input_suffix="/path/to/xxxxxx.csv"  # expect the 2nd column to be BDMAP ID
+        input_list="\$labels2onehot.build_input_list_from_csv(@input_dir,""@input_suffix,""@output_dir)"
+        export VISTA3D_OUTPUT_DIR="./eval"
+        # <<<<<<<<<<<<<< Tunable parameters <<<<<<<<<<<<<<
         ```
-    2. Get CT from **csv file**:
-        - make sure the `scripts/inference.json` contains
-        ```json
-        "output_dir": "$@bundle_root + '/path/to/Tartget-OneHot-savings'",
+    - Then, run the inference process by the **Inference Command** is shown as follows
+        ```bash
+        CUDA_VISIBLE_DEVICES=0 bash run.sh "/path/to/ct_volumes" num_gpus
         ```
-        - make sure the `scripts/batch_inference.json` contains 
-        ```json
-        "input_suffix": "/path/to/xxxxxx.csv",
-        "input_list": "$labels2onehot.build_input_list_from_csv(@input_dir, @input_suffix, @output_dir)",  
-        ```
-    - Then, run the inference process by `bash run.sh "/path/to/ct_volumes" false num_gpus` (see bellow)
-
-
-
-The **Inference Command** is shown as follows
-```bash
-# predict 117  + 2  (left/right lung) = 119 classes
-bash run.sh "/path/to/ct_volumes" false num_gpus
-```
-where: 
-1. `"/path/to/ct_volumes"` denotes the absolute path to ct volumes
-2. `false` means doesn't use second stage inference for the other 7 classes (DON'T change it)
-3. `num_gpus` denotes the number of GPU(s) used for inference. Set `num_gpus` to 1 to start single-GPU inference, and set `num_gpus` to 4 to start 4-GPUs inference (with DDP). 
+        where: 
+        1. `"/path/to/ct_volumes"` denotes the absolute path to ct volumes
+        2. `num_gpus` denotes the number of GPU(s) used for inference. 
+        
+            Set `num_gpus` to 1 to start single-GPU inference, and set `num_gpus` to 4 to start 4-GPUs inference (remember to modify `CUDA_VISIBLE_DEVICES`). 
 
 <!-- What's more, using `nohup` is strongly recommanded:
 ```bash

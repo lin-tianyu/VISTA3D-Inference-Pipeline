@@ -82,7 +82,7 @@ def build_input_list(input_dir, input_suffix, output_dir):
         print("\033[31m", *string, "\033[0m")
 
     print("build input list...")
-    input_list_path = sorted(glob.glob(os.path.join(input_dir, "BDMAP_0003*", input_suffix)))
+    input_list_path = sorted(glob.glob(os.path.join(input_dir, "BDMAP_00032*", input_suffix)))
     print(len(input_list_path))
     input_dict = {x.split("/")[-2]:x for x in input_list_path if 32584 <= int(x.split("/")[-2][-5:]) and int(x.split("/")[-2][-5:]) <= 34427} # if 32584 <= int(x.split("/")[-2][-5:]) and int(x.split("/")[-2][-5:]) <= 34427
     rprint("[INFO]", "[Total Volumes Detected]", len(input_dict))
