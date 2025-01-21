@@ -113,6 +113,7 @@ There are 3 designed scene:
         
             Set `num_gpus` to 1 to start single-GPU inference, and set `num_gpus` to 4 to start 4-GPUs inference (remember to modify `CUDA_VISIBLE_DEVICES`). 
 
+
 <!-- What's more, using `nohup` is strongly recommanded:
 ```bash
 # predict 117  + 2  (left/right lung) = 119 classes

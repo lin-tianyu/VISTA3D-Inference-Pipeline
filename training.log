@@ -65,3 +65,4 @@
 2025-01-19 05:40:07,747 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run complete. Time taken: 01:07:12.959
 2025-01-19 06:54:25,840 - ignite.engine.engine.Vista3dEvaluator - INFO - Epoch[1] Complete. Time taken: 02:19:38.406
 2025-01-19 06:54:25,840 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run complete. Time taken: 02:19:38.407
+2025-01-21 17:43:58,689 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
