@@ -82,8 +82,9 @@ def build_input_list(input_dir, input_suffix, output_dir):
         print("\033[31m", *string, "\033[0m")
 
     print("build input list...")
-    input_list_path = sorted(glob.glob(os.path.join(input_dir, "*", input_suffix)))   
-    input_dict = {x.split("/")[-2]:x for x in input_list_path} # if 32584 <= int(x.split("/")[-2][-5:]) and int(x.split("/")[-2][-5:]) <= 34427
+    input_list_path = sorted(glob.glob(os.path.join(input_dir, "BDMAP_0003*", input_suffix)))
+    print(len(input_list_path))
+    input_dict = {x.split("/")[-2]:x for x in input_list_path if 32584 <= int(x.split("/")[-2][-5:]) and int(x.split("/")[-2][-5:]) <= 34427} # if 32584 <= int(x.split("/")[-2][-5:]) and int(x.split("/")[-2][-5:]) <= 34427
     rprint("[INFO]", "[Total Volumes Detected]", len(input_dict))
 
     eval_list_path = glob.glob(os.path.join(output_dir, "*", "predictions"))
@@ -273,7 +274,7 @@ def seperate_class(data):
                 
     # Access the filename of the saved image    
     # NOTE: MODITY THIS TO ONE-HOT OUTPUT PATH!
-    output_root = "./eval_wholebody_bodymap"
+    output_root = os.environ["VISTA3D_OUTPUT_DIR"]  # brillant my friend!
 
     filename = data['image_meta_dict']['filename_or_obj']    
     volume_name = filename.split("/")[-2]
@@ -294,7 +295,7 @@ def seperate_class(data):
 
     save_each_class(volume_name, pred_nii, class_list, label_list, label_prompt, output_root)
 
-    os.remove(os.path.join(output_root, volume_name, "ct_step1_117.nii.gz"))
+    # os.remove(os.path.join(output_root, volume_name, "ct_step1_117.nii.gz"))
 
     return data
 
