@@ -1,11 +1,25 @@
-2025-01-21 21:23:06,202 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
-2025-01-21 21:30:41,513 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-21 21:30:41,515 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
-2025-01-21 21:33:15,444 - ignite.engine.engine.Vista3dEvaluator - ERROR - Current run is terminating due to exception: applying transform <monai.transforms.compose.Compose object at 0x7f156fbbe750>
-2025-01-21 21:33:15,624 - ignite.engine.engine.Vista3dEvaluator - ERROR - Engine run is terminating due to exception: applying transform <monai.transforms.compose.Compose object at 0x7f156fbbe750>
-2025-01-21 21:34:17,848 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-21 21:34:17,849 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
-2025-01-21 21:34:55,091 - ignite.engine.engine.Vista3dEvaluator - INFO - Epoch[1] Complete. Time taken: 00:00:37.242
-2025-01-21 21:34:55,091 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run complete. Time taken: 00:00:37.242
-2025-01-21 21:49:04,171 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
-2025-01-21 21:51:03,477 - ignite.engine.engine.Vista3dEvaluator - ERROR - Engine run is terminating due to exception: 
+2025-01-22 00:51:06,417 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-01-22 00:51:06,424 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-01-22 00:51:06,423 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-01-22 00:51:06,426 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-01-22 00:51:06,427 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-01-22 00:53:22,561 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-01-22 00:53:22,561 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-01-22 00:53:22,564 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-01-22 00:53:22,564 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-01-22 00:53:22,565 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-01-22 00:59:15,912 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-01-22 00:59:15,913 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-01-22 00:59:15,914 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-01-22 01:00:32,695 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-01-22 01:00:32,696 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-01-22 01:00:32,697 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-01-22 01:01:56,182 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-01-22 01:01:56,183 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-01-22 01:01:56,184 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-01-22 01:04:27,530 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-01-22 01:04:27,530 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-01-22 01:04:27,531 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-01-22 01:07:12,684 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-01-22 01:07:12,688 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-01-22 01:07:12,689 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs

@@ -1,6 +1,7 @@
 # VISTA3D Inference Pipeline
 
 > Author: Tianyu Lin<br>
+> GPU memory >= 40GB is highly recommended!
 
 To run this inference pipeline, only **⚙️ Requirement** section and **💻 Usage** section are needed. The other sections are for detailed information.
 

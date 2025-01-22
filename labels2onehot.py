@@ -82,9 +82,13 @@ def build_input_list(input_dir, input_suffix, output_dir):
         print("\033[31m", *string, "\033[0m")
 
     print("build input list...")
-    input_list_path = sorted(glob.glob(os.path.join(input_dir, "BDMAP_0003*", input_suffix)))
-    print(len(input_list_path))
-    input_dict = {x.split("/")[-2]:x for x in input_list_path if 32584 <= int(x.split("/")[-2][-5:]) and int(x.split("/")[-2][-5:]) <= 34427} # if 32584 <= int(x.split("/")[-2][-5:]) and int(x.split("/")[-2][-5:]) <= 34427
+
+    # List all files in the directory (os.scandir is super fast)
+    filtered_files = [os.path.join(entry.path, input_suffix) for entry in os.scandir(input_dir)]
+    # Sort the filtered file paths
+    input_list_path = sorted(filtered_files)
+
+    input_dict = {x.split("/")[-2]:x for x in input_list_path} # if 32584 <= int(x.split("/")[-2][-5:]) and int(x.split("/")[-2][-5:]) <= 34427
     rprint("[INFO]", "[Total Volumes Detected]", len(input_dict))
 
     eval_list_path = glob.glob(os.path.join(output_dir, "*", "predictions"))
@@ -104,7 +108,8 @@ def build_input_list(input_dir, input_suffix, output_dir):
     rprint("[INFO]", "[Remaining Volumes]", len(input_list))
 
     if len(input_list) == 0:
-        raise ValueError("\033[31mAll volumes have already been inferenced and stored in `./eval/`. Enjoy.\033[0m")
+        rprint("\033[31mAll volumes have already been inferenced and stored in `./eval/`. Enjoy.\033[0m")
+        sys.exit(0)
     return input_list
 
 
@@ -295,7 +300,7 @@ def seperate_class(data):
 
     save_each_class(volume_name, pred_nii, class_list, label_list, label_prompt, output_root)
 
-    # os.remove(os.path.join(output_root, volume_name, "ct_step1_117.nii.gz"))
+    os.remove(os.path.join(output_root, volume_name, "ct_step1_117.nii.gz"))
 
     return data
 

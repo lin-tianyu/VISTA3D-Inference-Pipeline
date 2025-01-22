@@ -23,8 +23,8 @@ export VISTA3D_OUTPUT_DIR="./eval"
 # >>>>>>>>>>>>>> SINGLE GPU inference >>>>>>>>>>>>>>
 if [ $num_gpus -eq $single_gpu ]; then
     echo "single GPU inference..."
-    python -m monai.bundle run \
-        --config_file="['configs/inference.json', 'configs/batch_inference.json', 'configs/mgpu_inference.json']" \
+    torchrun --nnodes=1 --nproc_per_node=$num_gpus -m monai.bundle run \
+        --config_file="['configs/inference.json', 'configs/batch_inference.json']" \
         --input_dir=$input_dir \
         --input_suffix=$input_suffix \
         --input_list=$input_list \
@@ -33,10 +33,11 @@ if [ $num_gpus -eq $single_gpu ]; then
 fi
 # <<<<<<<<<<<<<< MULTI GPU inference <<<<<<<<<<<<<<
 
+
 # >>>>>>>>>>>>>> MULTI GPU inference >>>>>>>>>>>>>>
 if [ $num_gpus -gt $single_gpu ]; then
     echo "multi GPU inference..."
-    torchrun --nnodes=1 --nproc_per_node=$num_gpus -m monai.bundle run \
+    torchrun --nnodes=1 --nproc_per_node=$num_gpus --master_port=29502 -m monai.bundle run \
         --config_file="['configs/inference.json', 'configs/batch_inference.json', 'configs/mgpu_inference.json']" \
         --input_dir=$input_dir \
         --input_suffix=$input_suffix \
