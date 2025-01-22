@@ -6,7 +6,7 @@ To run this inference pipeline, only **⚙️ Requirement** section and **💻 U
 
 ## 📰 News
 - Update 21/01/2024:
-    1. solve `noisy inference` bug.
+    1. solve `noisy inference` bug by correctly loading checkpoints...
     2. Update `run.sh` script to simplfy usage. No need to mess with json files anymore.
 - Update 19/01/2024:
     1. Please focus on `label2onehot.py`, `scripts/inference.json` and `scripts/batch_inference.json` if you want to modify some settings. See the Usage section for more details.
