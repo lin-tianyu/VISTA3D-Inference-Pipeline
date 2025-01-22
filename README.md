@@ -11,7 +11,6 @@ To run this inference pipeline, only **⚙️ Requirement** section and **💻 U
 - Update 19/01/2024:
     1. Please focus on `label2onehot.py`, `scripts/inference.json` and `scripts/batch_inference.json` if you want to modify some settings. See the Usage section for more details.
     2. The label mapping has been changed to `AbdomenAtlas3.1` version.
-    3. I have encountered a BUG regrading `ImportError` of pytorch. Likely this is beacuse of CUDA. The CCVL19 server **with CUDA-11.7** doesn't have this BUG, while the CCVL18 server with CUDA-12+ has.
 <details>
 <summary>Click to see previous updates.</summary>
 
