@@ -71,8 +71,7 @@ bash environment.sh
 ## 💻 Usage
 
 <!-- In short, VISTA3D can predict 124 (117+7) non-conflict labels. And the [author recommends](https://github.com/Project-MONAI/VISTA/issues/41) segment 7 of the classes (**not included in Touchstone**) in a separate inference stage to prevent noisy output. (See details in the  **Label Description** section below.) -->
-Sadly, due to MONAI Bundle's high-level wrapper design, some modifications need to be made for customized usage of this inference scripts.
-There are 3 designed scene:
+There are designed scenes to use this script:
 1. Only want to seperate VISTA3D combined results into one-hot label format:
     ```bash
     python label2onehot.py \
@@ -82,7 +81,7 @@ There are 3 designed scene:
 
 2. VISTA3D Inference + split to one-hot labels:
     1. get CT paths from **file directory** (by default)
-        - modify some  parameters in `run.sh`:
+        - modify some parameters in `run.sh`:
         ```bash
         # >>>>>>>>>>>>>> Tunable parameters >>>>>>>>>>>>>>
         input_suffix="ct.nii.gz"
@@ -91,7 +90,7 @@ There are 3 designed scene:
         # <<<<<<<<<<<<<< Tunable parameters <<<<<<<<<<<<<<
         ```
     2. get CT paths form **csv** (optional)
-        - modify some  parameters in `run.sh`:
+        - modify some parameters in `run.sh`:
         ```bash
         # >>>>>>>>>>>>>> Tunable parameters >>>>>>>>>>>>>>
         input_suffix="/path/to/xxxxxx.csv"  # expect the 2nd column to be BDMAP ID
