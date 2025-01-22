@@ -3,15 +3,11 @@
 > Author: Tianyu Lin<br>
 > GPU memory >= 40GB is highly recommended!
 
-To run this inference pipeline, only **⚙️ Requirement** section and **💻 Usage** section are needed. The other sections are for detailed information.
-
 ## 📰 News
 - Update 21/01/2024:
     1. solve `noisy inference` bug by correctly loading checkpoints...
     2. Update `run.sh` script to simplfy usage. No need to mess with json files anymore.
-- Update 19/01/2024:
-    1. Please focus on `label2onehot.py`, `scripts/inference.json` and `scripts/batch_inference.json` if you want to modify some settings. See the Usage section for more details.
-    2. The label mapping has been changed to `AbdomenAtlas3.1` version.
+    3. The label mapping has been changed to `AbdomenAtlas3.1` version.
 <details>
 <summary>Click to see previous updates.</summary>
 
@@ -94,7 +90,7 @@ There are 3 designed scene:
         export VISTA3D_OUTPUT_DIR="./eval"
         # <<<<<<<<<<<<<< Tunable parameters <<<<<<<<<<<<<<
         ```
-    2. get CT paths form **csv**
+    2. get CT paths form **csv** (optional)
         - modify some  parameters in `run.sh`:
         ```bash
         # >>>>>>>>>>>>>> Tunable parameters >>>>>>>>>>>>>>
@@ -105,13 +101,12 @@ There are 3 designed scene:
         ```
     - Then, run the inference process by the **Inference Command** is shown as follows
         ```bash
-        CUDA_VISIBLE_DEVICES=0 bash run.sh "/path/to/ct_volumes" num_gpus
+        sh run.sh "/path/to/ct_volumes" num_gpus
         ```
         where: 
         1. `"/path/to/ct_volumes"` denotes the absolute path to ct volumes
         2. `num_gpus` denotes the number of GPU(s) used for inference. 
         
-            Set `num_gpus` to 1 to start single-GPU inference, and set `num_gpus` to 4 to start 4-GPUs inference (remember to modify `CUDA_VISIBLE_DEVICES`). 
 
 
 <!-- What's more, using `nohup` is strongly recommanded:
