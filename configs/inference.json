@@ -17,7 +17,7 @@
     "output_dtype": "$np.uint8",
     "output_postfix": "trans",
     "separate_folder": false,
-    "input_dict": "${'image': '/GPUFS/nsccgz_ywang_zfd/LinTianyu/CCVL/warmup-training/AbdomenAtlasDemo/BDMAP_00000001/ct.nii.gz', 'label_prompt': [3]}",
+    "input_dict": "${'image': '/mnt/realccvl15/zzhou82/data/AbdomenAtlasPro/BDMAP_00032584/ct.nii.gz', 'label_prompt': [3]}",
     "everything_labels": "$list(set([i+1 for i in range(132)]) - set([2,16,18,20,21,23,24,25,26,27,128,129,130,131,132]))",
     "metadata_path": "$@bundle_root + '/configs/metadata.json'",
     "metadata": "$json.loads(pathlib.Path(@metadata_path).read_text())",
@@ -38,9 +38,9 @@
     },
     "input_channels": 1,
     "resample_spacing": [
-        3.5,
-        3.5,
-        3.5
+        1.5,
+        1.5,
+        1.5
     ],
     "sw_batch_size": 1,
     "patch_size": [
@@ -126,7 +126,7 @@
     "inferer": {
         "_target_": "scripts.inferer.Vista3dInferer",
         "roi_size": "@patch_size",
-        "overlap": 0.5,
+        "overlap": 0.3,
         "sw_batch_size": "@sw_batch_size",
         "use_point_window": "@use_point_window"
     },
@@ -185,7 +185,7 @@
     ],
     "checkpointloader": {
         "_target_": "CheckpointLoader",
-        "load_path": "$@bundle_root + '/models/model.pt'",
+        "load_path": "$@bundle_root + '/models/model_bundle.pt'",
         "load_dict": {
             "model": "@network"
         },

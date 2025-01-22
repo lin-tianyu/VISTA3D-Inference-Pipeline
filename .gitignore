@@ -1,6 +1,7 @@
-models/model.pt
+models/*
 
 eval/
+eval*/
 eval_allSegments_20k/
 eval_deeplesion_bodymap/
 eval_wholebody_bodymap/
