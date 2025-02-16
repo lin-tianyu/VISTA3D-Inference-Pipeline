@@ -1,25 +1,449 @@
-2025-01-22 00:51:06,417 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-22 00:51:06,424 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-22 00:51:06,423 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-22 00:51:06,426 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
-2025-01-22 00:51:06,427 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-22 00:53:22,561 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-22 00:53:22,561 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-22 00:53:22,564 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-22 00:53:22,564 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-22 00:53:22,565 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
-2025-01-22 00:59:15,912 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-22 00:59:15,913 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-22 00:59:15,914 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
-2025-01-22 01:00:32,695 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-22 01:00:32,696 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-22 01:00:32,697 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
-2025-01-22 01:01:56,182 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-22 01:01:56,183 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-22 01:01:56,184 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
-2025-01-22 01:04:27,530 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-22 01:04:27,530 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-22 01:04:27,531 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
-2025-01-22 01:07:12,684 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-22 01:07:12,688 - root - INFO - Restored all variables from .//models/model_bundle.pt
-2025-01-22 01:07:12,689 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 03:14:41,635 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 5
+2025-02-15 03:14:41,658 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 03:14:41,685 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 03:14:41,688 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 03:14:41,689 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 7
+2025-02-15 03:14:41,697 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 03:14:41,700 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 4
+2025-02-15 03:14:41,700 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 6
+2025-02-15 03:14:41,700 - torch.distributed.distributed_c10d - INFO - Rank 6: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:14:41,701 - torch.distributed.distributed_c10d - INFO - Rank 7: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:14:41,702 - torch.distributed.distributed_c10d - INFO - Rank 4: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:14:41,705 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:14:41,707 - torch.distributed.distributed_c10d - INFO - Rank 5: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:14:41,708 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:14:41,709 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:14:41,710 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:15:26,557 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:15:26,554 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:15:26,548 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:15:26,564 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:15:26,565 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:15:26,564 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:15:26,567 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 03:15:26,568 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:15:26,570 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:28:02,153 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 03:28:02,161 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 03:28:02,173 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 03:28:02,184 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 5
+2025-02-15 03:28:02,210 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 7
+2025-02-15 03:28:02,213 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 4
+2025-02-15 03:28:02,219 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 03:28:02,219 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 6
+2025-02-15 03:28:02,219 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:28:02,219 - torch.distributed.distributed_c10d - INFO - Rank 6: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:28:02,221 - torch.distributed.distributed_c10d - INFO - Rank 7: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:28:02,224 - torch.distributed.distributed_c10d - INFO - Rank 4: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:28:02,225 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:28:02,226 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:28:02,227 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:28:02,228 - torch.distributed.distributed_c10d - INFO - Rank 5: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:28:33,711 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:28:33,711 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:28:33,716 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:28:33,723 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:28:33,724 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 03:28:33,736 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:28:33,739 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:28:33,755 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:28:33,762 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:31:15,204 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 03:31:15,219 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 7
+2025-02-15 03:31:15,238 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 03:31:15,242 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 4
+2025-02-15 03:31:15,244 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 6
+2025-02-15 03:31:15,246 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 5
+2025-02-15 03:31:15,250 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 03:31:15,254 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 03:31:15,255 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:31:15,255 - torch.distributed.distributed_c10d - INFO - Rank 6: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:31:15,256 - torch.distributed.distributed_c10d - INFO - Rank 5: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:31:15,260 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:31:15,261 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:31:15,262 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:31:15,263 - torch.distributed.distributed_c10d - INFO - Rank 7: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:31:15,264 - torch.distributed.distributed_c10d - INFO - Rank 4: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:31:43,424 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:31:43,425 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:31:43,433 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:31:43,436 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:31:43,441 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:31:43,445 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:31:43,447 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:31:43,449 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:31:43,451 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 03:35:13,688 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 03:35:13,682 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 03:35:13,690 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 03:35:13,701 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 5
+2025-02-15 03:35:13,705 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 7
+2025-02-15 03:35:13,709 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 03:35:13,711 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 4
+2025-02-15 03:35:13,717 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 6
+2025-02-15 03:35:13,717 - torch.distributed.distributed_c10d - INFO - Rank 6: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:35:13,719 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:35:13,720 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:35:13,721 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:35:13,722 - torch.distributed.distributed_c10d - INFO - Rank 4: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:35:13,722 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:35:13,723 - torch.distributed.distributed_c10d - INFO - Rank 5: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:35:13,726 - torch.distributed.distributed_c10d - INFO - Rank 7: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:35:41,131 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:35:41,143 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:35:41,154 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:35:41,155 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 03:35:41,156 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:35:41,160 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:35:41,163 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:35:41,165 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:35:41,169 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:37:15,602 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 03:37:15,612 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 5
+2025-02-15 03:37:15,616 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 6
+2025-02-15 03:37:15,628 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 03:37:15,631 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 03:37:15,635 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 7
+2025-02-15 03:37:15,639 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 03:37:15,640 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 4
+2025-02-15 03:37:15,640 - torch.distributed.distributed_c10d - INFO - Rank 4: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:37:15,642 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:37:15,643 - torch.distributed.distributed_c10d - INFO - Rank 5: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:37:15,643 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:37:15,646 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:37:15,647 - torch.distributed.distributed_c10d - INFO - Rank 7: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:37:15,649 - torch.distributed.distributed_c10d - INFO - Rank 6: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:37:15,650 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:37:44,547 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:37:44,554 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:37:44,575 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:37:44,556 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:37:44,591 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:37:44,587 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:37:44,594 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 03:37:44,594 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:37:44,584 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:39:19,302 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 03:39:19,302 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 03:39:19,306 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 03:39:19,315 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 5
+2025-02-15 03:39:19,316 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 4
+2025-02-15 03:39:19,318 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 7
+2025-02-15 03:39:19,324 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 6
+2025-02-15 03:39:19,325 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 03:39:19,325 - torch.distributed.distributed_c10d - INFO - Rank 6: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:39:19,325 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:39:19,326 - torch.distributed.distributed_c10d - INFO - Rank 5: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:39:19,327 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:39:19,328 - torch.distributed.distributed_c10d - INFO - Rank 4: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:39:19,329 - torch.distributed.distributed_c10d - INFO - Rank 7: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:39:19,333 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:39:19,334 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:39:56,845 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:39:56,851 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:39:56,854 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:39:56,835 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:39:56,856 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:39:56,857 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 03:39:56,858 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:39:56,859 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:39:56,848 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:44:46,584 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 4
+2025-02-15 03:44:46,595 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 03:44:46,598 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 5
+2025-02-15 03:44:46,599 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 03:44:46,612 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 7
+2025-02-15 03:44:46,615 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 03:44:46,620 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 6
+2025-02-15 03:44:46,622 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 03:44:46,622 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:44:46,622 - torch.distributed.distributed_c10d - INFO - Rank 7: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:44:46,626 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:44:46,628 - torch.distributed.distributed_c10d - INFO - Rank 4: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:44:46,630 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:44:46,631 - torch.distributed.distributed_c10d - INFO - Rank 6: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:44:46,632 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:44:46,633 - torch.distributed.distributed_c10d - INFO - Rank 5: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 03:45:22,593 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:45:22,594 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 03:45:22,614 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:45:22,623 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:45:22,636 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:45:22,674 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:45:22,710 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:45:23,008 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 03:45:23,028 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 05:29:15,342 - ignite.engine.engine.Vista3dEvaluator - ERROR - Current run is terminating due to exception: applying transform <monai.transforms.compose.Compose object at 0x7f45f38a9d30>
+2025-02-15 05:29:35,086 - ignite.engine.engine.Vista3dEvaluator - ERROR - Engine run is terminating due to exception: applying transform <monai.transforms.compose.Compose object at 0x7f45f38a9d30>
+2025-02-15 10:06:47,999 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 4
+2025-02-15 10:06:48,024 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 7
+2025-02-15 10:06:48,029 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 10:06:48,029 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 10:06:48,030 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 6
+2025-02-15 10:06:48,031 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 10:06:48,036 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 10:06:48,040 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 5
+2025-02-15 10:06:48,041 - torch.distributed.distributed_c10d - INFO - Rank 5: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 10:06:48,042 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 10:06:48,045 - torch.distributed.distributed_c10d - INFO - Rank 7: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 10:06:48,046 - torch.distributed.distributed_c10d - INFO - Rank 4: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 10:06:48,046 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 10:06:48,050 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 10:06:48,051 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 10:06:48,052 - torch.distributed.distributed_c10d - INFO - Rank 6: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 10:07:26,961 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 10:07:26,973 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 10:07:27,199 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 10:07:27,200 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 10:07:27,211 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 10:07:27,216 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 10:07:27,234 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 10:07:27,249 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 10:07:27,249 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 10:18:45,236 - ignite.engine.engine.Vista3dEvaluator - ERROR - Current run is terminating due to exception: applying transform <monai.transforms.compose.Compose object at 0x7ffa3b08a940>
+2025-02-15 10:19:02,843 - ignite.engine.engine.Vista3dEvaluator - ERROR - Engine run is terminating due to exception: applying transform <monai.transforms.compose.Compose object at 0x7ffa3b08a940>
+2025-02-15 10:25:16,812 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 7
+2025-02-15 10:25:16,822 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 10:25:16,848 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 10:25:16,855 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 10:25:16,855 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 4
+2025-02-15 10:25:16,856 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 6
+2025-02-15 10:25:16,861 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 10:25:17,423 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 5
+2025-02-15 10:25:17,423 - torch.distributed.distributed_c10d - INFO - Rank 5: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 10:25:17,425 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 10:25:17,426 - torch.distributed.distributed_c10d - INFO - Rank 4: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 10:25:17,427 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 10:25:17,429 - torch.distributed.distributed_c10d - INFO - Rank 6: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 10:25:17,430 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 10:25:17,431 - torch.distributed.distributed_c10d - INFO - Rank 7: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 10:25:17,432 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 10:25:54,360 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 10:25:54,361 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 10:25:54,365 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 10:25:54,373 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 10:25:54,380 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 10:25:54,616 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 10:25:54,776 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 10:25:54,819 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 10:25:54,851 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 11:35:35,663 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 11:35:35,664 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 11:35:35,667 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 11:35:35,669 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 11:35:35,669 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 11:35:35,673 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 11:35:35,674 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 11:35:35,677 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 11:35:53,790 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 11:35:53,947 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 11:35:53,951 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 11:35:53,957 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 11:35:53,985 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 11:53:35,863 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 11:53:35,870 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 11:53:35,872 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 11:53:35,874 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 11:53:35,875 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 11:53:35,880 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 11:53:35,884 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 11:53:35,896 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 11:53:53,887 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 11:53:53,893 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 11:53:53,896 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 11:53:53,897 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 11:53:53,898 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 11:56:36,810 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 11:56:36,813 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 11:56:36,815 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 11:56:36,817 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 11:56:36,817 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 11:56:36,820 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 11:56:36,826 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 11:56:36,827 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 11:57:10,545 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 11:57:10,562 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 11:57:10,564 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 11:57:10,567 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 11:57:10,569 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 13:10:36,683 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 13:10:36,688 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 13:10:36,693 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 13:10:36,698 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 13:10:36,699 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 13:10:36,699 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 13:10:36,704 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 13:10:36,705 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 13:10:52,178 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 13:10:52,179 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 13:10:52,180 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 13:10:52,192 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 13:10:52,193 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 13:16:03,545 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 13:16:03,549 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 13:16:03,551 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 13:16:03,552 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 13:16:03,552 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 13:16:03,556 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 13:16:03,561 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 13:16:03,573 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 13:16:17,740 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 13:16:17,757 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 13:16:17,765 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 13:16:17,775 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 13:16:17,780 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 13:27:33,171 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 13:27:33,184 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 13:27:33,188 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 13:27:33,188 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 13:27:33,189 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 13:27:33,192 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 13:27:33,195 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 13:27:33,198 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 13:27:47,346 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 13:27:47,407 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 13:27:47,598 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 13:27:47,609 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 13:27:47,610 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 13:52:33,911 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 13:52:33,922 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 13:52:33,927 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 13:52:33,927 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 13:52:33,927 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 13:52:33,931 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 13:52:33,932 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 13:52:33,933 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 13:52:48,378 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 13:52:48,379 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 13:52:48,430 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 13:52:48,435 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 13:52:48,564 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 14:06:32,332 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 14:06:32,332 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 14:06:36,777 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 14:06:36,778 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 14:06:36,778 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 14:06:36,780 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 14:06:36,781 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 14:06:36,787 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 14:06:51,108 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 14:06:51,175 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 14:06:51,308 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 14:06:51,315 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 14:06:51,316 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 14:54:28,458 - ignite.engine.engine.Vista3dEvaluator - ERROR - Current run is terminating due to exception: applying transform <monai.transforms.compose.Compose object at 0x7f722f0c69a0>
+2025-02-15 14:54:28,523 - ignite.engine.engine.Vista3dEvaluator - ERROR - Engine run is terminating due to exception: applying transform <monai.transforms.compose.Compose object at 0x7f722f0c69a0>
+2025-02-15 14:55:33,321 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 14:55:33,329 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 14:55:33,333 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 14:55:33,333 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 14:55:33,333 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 14:55:33,333 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 14:55:33,334 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 14:55:33,339 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 14:55:47,613 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 14:55:47,717 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 14:55:47,738 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 14:55:47,739 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 14:55:47,759 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 14:59:33,425 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 14:59:33,422 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 14:59:33,427 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 14:59:33,427 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 14:59:33,427 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 14:59:33,427 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 14:59:33,435 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 14:59:33,436 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 14:59:47,604 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 14:59:47,772 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 14:59:47,773 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 14:59:47,779 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 14:59:47,797 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 15:10:33,691 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 15:10:33,703 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 15:10:33,703 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 15:10:33,703 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 15:10:33,701 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 15:10:33,705 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 15:10:33,706 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 15:10:33,712 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2025-02-15 15:10:48,987 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 15:10:48,998 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 15:10:49,103 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 15:10:49,104 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 15:10:49,121 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 16:58:43,697 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 5
+2025-02-15 16:58:43,714 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 7
+2025-02-15 16:58:43,727 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 6
+2025-02-15 16:58:43,736 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 4
+2025-02-15 16:58:43,746 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 16:58:43,747 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 16:58:43,747 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 16:58:44,437 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 16:58:44,437 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 16:58:44,439 - torch.distributed.distributed_c10d - INFO - Rank 5: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 16:58:44,440 - torch.distributed.distributed_c10d - INFO - Rank 7: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 16:58:44,441 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 16:58:44,442 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 16:58:44,443 - torch.distributed.distributed_c10d - INFO - Rank 4: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 16:58:44,444 - torch.distributed.distributed_c10d - INFO - Rank 6: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 16:58:44,445 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 16:59:24,751 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 16:59:24,872 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 16:59:24,879 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 16:59:24,912 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 16:59:24,913 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 16:59:24,946 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 16:59:24,957 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 16:59:24,982 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 16:59:24,991 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 17:01:44,475 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-15 17:01:44,491 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 5
+2025-02-15 17:01:44,504 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 6
+2025-02-15 17:01:44,525 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 4
+2025-02-15 17:01:44,527 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 7
+2025-02-15 17:01:44,533 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-15 17:01:44,534 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-15 17:01:44,540 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-15 17:01:44,540 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 17:01:44,544 - torch.distributed.distributed_c10d - INFO - Rank 5: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 17:01:44,545 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 17:01:44,548 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 17:01:44,549 - torch.distributed.distributed_c10d - INFO - Rank 6: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 17:01:44,550 - torch.distributed.distributed_c10d - INFO - Rank 4: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 17:01:44,550 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 17:01:44,551 - torch.distributed.distributed_c10d - INFO - Rank 7: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-15 17:02:18,191 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 17:02:18,192 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-15 17:02:18,224 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 17:02:18,238 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 17:02:18,280 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 17:02:18,423 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 17:02:18,496 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 17:02:18,569 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-15 17:02:18,578 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-16 09:39:28,494 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2025-02-16 09:39:28,527 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 7
+2025-02-16 09:39:28,535 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 6
+2025-02-16 09:39:28,544 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2025-02-16 09:39:28,551 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 4
+2025-02-16 09:39:28,553 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 5
+2025-02-16 09:39:28,557 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2025-02-16 09:39:28,558 - torch.distributed.distributed_c10d - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2025-02-16 09:39:28,558 - torch.distributed.distributed_c10d - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-16 09:39:28,558 - torch.distributed.distributed_c10d - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-16 09:39:28,559 - torch.distributed.distributed_c10d - INFO - Rank 7: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-16 09:39:28,561 - torch.distributed.distributed_c10d - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-16 09:39:28,562 - torch.distributed.distributed_c10d - INFO - Rank 4: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-16 09:39:28,564 - torch.distributed.distributed_c10d - INFO - Rank 5: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-16 09:39:28,565 - torch.distributed.distributed_c10d - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-16 09:39:28,566 - torch.distributed.distributed_c10d - INFO - Rank 6: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+2025-02-16 09:40:38,039 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-16 09:40:38,049 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-16 09:40:38,047 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-16 09:40:38,057 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-16 09:40:38,058 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-16 09:40:38,058 - ignite.engine.engine.Vista3dEvaluator - INFO - Engine run resuming from iteration 0, epoch 0 until 1 epochs
+2025-02-16 09:40:38,063 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-16 09:40:38,067 - root - INFO - Restored all variables from .//models/model_bundle.pt
+2025-02-16 09:40:38,075 - root - INFO - Restored all variables from .//models/model_bundle.pt

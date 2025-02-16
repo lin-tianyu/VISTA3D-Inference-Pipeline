@@ -38,9 +38,9 @@
     },
     "input_channels": 1,
     "resample_spacing": [
-        1.5,
-        1.5,
-        1.5
+        3.5,
+        3.5,
+        3.5
     ],
     "sw_batch_size": 1,
     "patch_size": [
@@ -126,7 +126,7 @@
     "inferer": {
         "_target_": "scripts.inferer.Vista3dInferer",
         "roi_size": "@patch_size",
-        "overlap": 0.3,
+        "overlap": 0.5,
         "sw_batch_size": "@sw_batch_size",
         "use_point_window": "@use_point_window"
     },

@@ -88,7 +88,7 @@ def build_input_list(input_dir, input_suffix, output_dir):
     # Sort the filtered file paths
     input_list_path = sorted(filtered_files)
 
-    input_dict = {x.split("/")[-2]:x for x in input_list_path} # if 32584 <= int(x.split("/")[-2][-5:]) and int(x.split("/")[-2][-5:]) <= 34427
+    input_dict = {x.split("/")[-2]:x for x in input_list_path if 32584 <= int(x.split("/")[-2][-5:]) and int(x.split("/")[-2][-5:]) <= 34427} # if 32584 <= int(x.split("/")[-2][-5:]) and int(x.split("/")[-2][-5:]) <= 34427
     rprint("[INFO]", "[Total Volumes Detected]", len(input_dict))
 
     eval_list_path = glob.glob(os.path.join(output_dir, "*", "predictions"))
@@ -113,6 +113,18 @@ def build_input_list(input_dir, input_suffix, output_dir):
     return input_list
 
 
+def ignore_error_list():
+    log_file_path = "errors.log"
+    unique_ids = set()
+    with open(log_file_path, "r") as file:
+        for line in file:
+            parts = line.split('/')
+            for part in parts:
+                if part.startswith("BDMAP_"):
+                    unique_ids.add(part)
+                    break
+    return unique_ids
+
 def build_input_list_from_csv(input_dir, input_csv, output_dir):
     def rprint(*string):
         print("\033[31m", *string, "\033[0m")
@@ -122,11 +134,12 @@ def build_input_list_from_csv(input_dir, input_csv, output_dir):
     # building list using csv
     df = pd.read_csv(input_csv)
     # >>>>>> The following part might differ due to different csv file >>>>>>
-    patient_id_list = sorted(df["Target ID"].tolist())  # [BDMAP_XXXXXXXX, ]
+    patient_id_list = sorted(df["BDMAP ID"].tolist())  # [BDMAP_XXXXXXXX, ]
     input_list_path = list(map(lambda x:os.path.join(input_dir, x, "ct.nii.gz"), patient_id_list))
     # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-    input_dict = {x.split("/")[-2]:x for x in input_list_path} # if 32584 <= int(x.split("/")[-2][-5:]) and int(x.split("/")[-2][-5:]) <= 34427
+    print(ignore_error_list())
+    input_dict = {x.split("/")[-2]:x for x in input_list_path if x.split("/")[-2] not in ignore_error_list()} # if 32584 <= int(x.split("/")[-2][-5:]) and int(x.split("/")[-2][-5:]) <= 34427
     rprint("[INFO]", "[Total Volumes Detected]", len(input_dict))
 
     eval_list_path = glob.glob(os.path.join(output_dir, "*", "predictions"))

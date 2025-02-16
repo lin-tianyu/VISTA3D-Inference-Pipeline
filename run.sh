@@ -14,9 +14,9 @@ single_gpu=1
 
 
 # >>>>>>>>>>>>>> Tunable parameters >>>>>>>>>>>>>>
-input_suffix="ct.nii.gz"
-input_list="\$labels2onehot.build_input_list(@input_dir,""@input_suffix,""@output_dir)"
-export VISTA3D_OUTPUT_DIR="./eval"
+input_suffix="csv/UCSF_p2.csv"
+input_list="\$labels2onehot.build_input_list_from_csv(@input_dir,""@input_suffix,""@output_dir)"
+export VISTA3D_OUTPUT_DIR="./eval_UCSF_p2"
 # <<<<<<<<<<<<<< Tunable parameters <<<<<<<<<<<<<<
 
 
