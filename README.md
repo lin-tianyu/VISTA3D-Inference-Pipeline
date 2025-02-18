@@ -74,7 +74,7 @@ bash environment.sh
 There are designed scenes to use this script:
 1. Only want to seperate VISTA3D combined results into one-hot label format:
     ```bash
-    python label2onehot.py \
+    python labels2onehot.py \
         --pred_root /path/to/VISTA3D-predictions \
         --output_root /path/to/Tartget-OneHot-savings
     ```
