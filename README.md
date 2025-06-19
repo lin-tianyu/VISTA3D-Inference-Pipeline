@@ -4,7 +4,10 @@
 > GPU memory >= 40GB is highly recommended!
 
 ## 📰 News
-- Update 21/01/2024:
+- Update 06/19/2025:
+    - Add the downloading script of the model checkpoint.
+    - Add warning of inference spacing.
+- Update 01/21/2024:
     1. solve `noisy inference` bug by correctly loading checkpoints...
     2. Update `run.sh` script to simplfy usage. No need to mess with json files anymore.
     3. The label mapping has been changed to `AbdomenAtlas3.1` version.
@@ -40,7 +43,6 @@
     - NOTE: second stage for inference on 7 other classes is deprecated temporarily.
 </details>
 
-
 ## ⚙️ Requirement
 Using Python `venv` to build a virtual environment. 
 First, ensure you're using `Python>=3.9`. 
@@ -68,7 +70,17 @@ bash environment.sh
 
 </details>
 
+## 📦 Model Checkpoint
+After installing the environment, run
+```bash
+python -m monai.bundle download "vista3d" --bundle_dir "bundles/"
+```
+
 ## 💻 Usage
+> [!WARNING]
+> To save GPU memory, the inference spacing is default to [3.5, 3.5, 3.5].
+> 
+> To release to full capability of VISTA3D, change `resample_spacing` in `configs/inference.json` to [1.5, 1.5, 1.5].
 
 <!-- In short, VISTA3D can predict 124 (117+7) non-conflict labels. And the [author recommends](https://github.com/Project-MONAI/VISTA/issues/41) segment 7 of the classes (**not included in Touchstone**) in a separate inference stage to prevent noisy output. (See details in the  **Label Description** section below.) -->
 There are designed scenes to use this script:
